@@ -1,0 +1,1995 @@
+{
+  "schema_version": 3,
+  "generated_at": "2026-04-26T15:13:59Z",
+  "locales": [
+    "de",
+    "en",
+    "es"
+  ],
+  "source": "repdb-preview",
+  "exercises": [
+    {
+      "id": "arnold-press",
+      "name_en": "Arnold Press",
+      "category": "strength",
+      "force_type": "push",
+      "mechanic": "compound",
+      "difficulty": "intermediate",
+      "equipment": "dumbbell",
+      "body_part": "chest",
+      "is_unilateral": false,
+      "is_bodyweight": false,
+      "is_placeholder": false,
+      "variation_group": "overhead-press",
+      "goals": [
+        "hypertrophy",
+        "strength"
+      ],
+      "tags": [
+        "knee_safe",
+        "lower_back_safe",
+        "no_axial_load"
+      ],
+      "instructions_en": [
+        "Hold a barbell at shoulder height with palms facing you.",
+        "Press the bar overhead while rotating your palms to face forward.",
+        "Fully extend your arms at the top without locking the elbows.",
+        "Reverse the motion and rotate back to the start.",
+        "Repeat for the desired number of reps."
+      ],
+      "primary_muscles": [
+        "anterior_deltoid",
+        "lateral_deltoid"
+      ],
+      "secondary_muscles": [
+        "serratus_anterior",
+        "trapezius",
+        "triceps_brachii"
+      ],
+      "name_de": "Arnold Press",
+      "instructions_de": [
+        "Halte eine Langhantel auf Schulterhöhe mit zur dir zeigenden Handflächen.",
+        "Drücke die Stange nach oben und drehe dabei die Handflächen nach vorne.",
+        "Strecke die Arme oben vollständig aus, ohne die Ellbogen zu überstrecken.",
+        "Kehre die Bewegung um und drehe zurück zur Ausgangsposition.",
+        "Wiederhole die gewünschte Anzahl von Wiederholungen."
+      ],
+      "name_es": "Press Arnold",
+      "instructions_es": [
+        "Sostén una barra a la altura de los hombros con las palmas mirando hacia ti.",
+        "Empuja la barra sobre la cabeza mientras rotas las palmas hacia adelante.",
+        "Extiende los brazos por completo en la parte superior sin bloquear los codos.",
+        "Invierte el movimiento y rota de vuelta a la posición inicial.",
+        "Repite el número de repeticiones deseado."
+      ],
+      "images": {
+        "classic": [
+          "start",
+          "peak"
+        ],
+        "flat": [
+          "start",
+          "peak"
+        ]
+      }
+    },
+    {
+      "id": "banded-lateral-walk",
+      "name_en": "Banded Lateral Walk",
+      "description_en": "A side-stepping movement performed with a loop band wrapped above the knees or around the ankles. Constant abduction tension fires the gluteus medius — a staple warm-up and rehab drill for hip stability.",
+      "category": "strength",
+      "force_type": "dynamic",
+      "mechanic": "compound",
+      "difficulty": "beginner",
+      "equipment": "loop_band",
+      "body_part": "upper_legs",
+      "is_unilateral": false,
+      "is_bodyweight": false,
+      "is_placeholder": false,
+      "goals": [
+        "rehabilitation",
+        "endurance",
+        "hypertrophy"
+      ],
+      "tags": [
+        "leg_day",
+        "warmup"
+      ],
+      "instructions_en": [
+        "Place a loop band around the legs above the knees (or around the ankles for a harder version).",
+        "Stand in a quarter-squat: feet shoulder-width, hips back, chest up, knees tracking over the toes.",
+        "Step one foot directly out to the side against the band tension.",
+        "Bring the trailing foot in toward the lead — keep tension on the band the entire time, do not let the feet snap together.",
+        "Continue side-stepping in one direction for the prescribed reps or distance, then reverse.",
+        "Stay low throughout; do not pop up between steps."
+      ],
+      "tips_en": [
+        "Keep the toes pointing straight forward — do not let the lead foot turn out.",
+        "Hips stay level; do not rock side-to-side as you step.",
+        "If the knees cave inward, the band is too strong — drop to a lighter one."
+      ],
+      "primary_muscles": [
+        "gluteus_medius"
+      ],
+      "secondary_muscles": [
+        "gluteus_maximus",
+        "quadriceps"
+      ],
+      "images": {
+        "classic": [
+          "start",
+          "peak"
+        ],
+        "flat": [
+          "start",
+          "peak"
+        ]
+      }
+    },
+    {
+      "id": "barbell-glute-bridge",
+      "name_en": "Barbell Glute Bridge",
+      "description_en": "A weighted glute bridge using a barbell for increased resistance.",
+      "category": "strength",
+      "force_type": "push",
+      "mechanic": "compound",
+      "difficulty": "intermediate",
+      "equipment": "barbell",
+      "body_part": "upper_legs",
+      "is_unilateral": false,
+      "is_bodyweight": false,
+      "is_placeholder": false,
+      "variation_group": "hip-thrust",
+      "goals": [
+        "hypertrophy",
+        "strength"
+      ],
+      "tags": [
+        "leg_day",
+        "lower_back_safe",
+        "knee_safe",
+        "shoulder_safe",
+        "no_axial_load"
+      ],
+      "instructions_en": [
+        "Lie on the floor with a barbell across your hips and knees bent.",
+        "Drive your hips up by squeezing your glutes.",
+        "Hold at the top with hips fully extended.",
+        "Lower with control.",
+        "Repeat."
+      ],
+      "primary_muscles": [
+        "gluteus_maximus"
+      ],
+      "secondary_muscles": [
+        "hamstrings"
+      ],
+      "relations": [
+        {
+          "to": "hip-thrust",
+          "type": "progression_of"
+        },
+        {
+          "to": "glute-bridge",
+          "type": "regression_of"
+        }
+      ],
+      "name_de": "Langhantel-Gesäßbrücke",
+      "description_de": "Eine Gesäßbrücke mit Langhantel für erhöhten Widerstand.",
+      "instructions_de": [
+        "Lege dich auf den Boden mit einer Langhantel über den Hüften und gebeugten Knien.",
+        "Stoße die Hüften nach oben, indem du die Gesäßmuskeln anspannst.",
+        "Halte oben mit vollständig gestreckten Hüften.",
+        "Senke kontrolliert.",
+        "Wiederhole."
+      ],
+      "name_es": "Puente de Glúteos con Barra",
+      "description_es": "Un puente de glúteos con carga usando una barra para mayor resistencia.",
+      "instructions_es": [
+        "Acuéstate en el suelo con una barra sobre las caderas y las rodillas flexionadas.",
+        "Eleva las caderas apretando los glúteos.",
+        "Aguanta en la parte superior con las caderas completamente extendidas.",
+        "Baja con control.",
+        "Repite."
+      ],
+      "images": {
+        "classic": [
+          "start",
+          "peak"
+        ],
+        "flat": [
+          "start",
+          "peak"
+        ]
+      }
+    },
+    {
+      "id": "behind-the-back-barbell-shrug",
+      "name_en": "Behind the Back Barbell Shrug",
+      "category": "strength",
+      "force_type": "pull",
+      "mechanic": "isolation",
+      "difficulty": "intermediate",
+      "equipment": "barbell",
+      "body_part": "back",
+      "is_unilateral": false,
+      "is_bodyweight": false,
+      "is_placeholder": false,
+      "variation_group": "shrug",
+      "goals": [
+        "hypertrophy"
+      ],
+      "tags": [
+        "knee_safe",
+        "lower_back_safe",
+        "shoulder_safe",
+        "no_axial_load"
+      ],
+      "instructions_en": [
+        "Stand holding a barbell behind your back with an overhand grip.",
+        "Keep your arms straight and chest up.",
+        "Shrug your shoulders straight up toward your ears.",
+        "Pause and squeeze at the top.",
+        "Lower under control and repeat."
+      ],
+      "primary_muscles": [
+        "trapezius"
+      ],
+      "secondary_muscles": [
+        "forearm_flexors",
+        "rhomboids"
+      ],
+      "name_de": "Langhantel-Shrug hinter dem Rücken",
+      "instructions_de": [
+        "Stehe und halte eine Langhantel hinter dem Rücken mit Obergriff.",
+        "Halte die Arme gestreckt und die Brust aufgerichtet.",
+        "Ziehe die Schultern senkrecht zu den Ohren hoch.",
+        "Halte kurz inne und spanne oben an.",
+        "Senke kontrolliert und wiederhole."
+      ],
+      "name_es": "Encogimiento de Hombros con Barra Detrás de la Espalda",
+      "instructions_es": [
+        "Párate sosteniendo una barra detrás de la espalda con agarre prono.",
+        "Mantén los brazos extendidos y el pecho hacia arriba.",
+        "Encoge los hombros directamente hacia las orejas.",
+        "Haz una pausa y aprieta en la parte superior.",
+        "Baja de forma controlada y repite."
+      ],
+      "images": {
+        "classic": [
+          "start",
+          "peak"
+        ],
+        "flat": [
+          "start",
+          "peak"
+        ]
+      }
+    },
+    {
+      "id": "behind-the-neck-press",
+      "name_en": "Behind the Neck Press",
+      "category": "strength",
+      "force_type": "push",
+      "mechanic": "compound",
+      "difficulty": "intermediate",
+      "equipment": "barbell",
+      "body_part": "chest",
+      "is_unilateral": false,
+      "is_bodyweight": false,
+      "is_placeholder": false,
+      "variation_group": "overhead-press",
+      "goals": [
+        "hypertrophy",
+        "strength"
+      ],
+      "tags": [
+        "knee_safe"
+      ],
+      "instructions_en": [
+        "Sit or stand with a barbell resting on your upper traps behind your neck.",
+        "Grip the bar wider than shoulder width.",
+        "Press the bar straight up overhead until your arms are extended.",
+        "Lower the bar back to the starting position under control.",
+        "Repeat for the desired number of reps."
+      ],
+      "primary_muscles": [
+        "anterior_deltoid",
+        "lateral_deltoid"
+      ],
+      "secondary_muscles": [
+        "trapezius",
+        "triceps_brachii"
+      ],
+      "name_de": "Nackendrücken",
+      "instructions_de": [
+        "Sitze oder stehe mit einer Langhantel auf dem oberen Trapezmuskel hinter dem Nacken.",
+        "Greife die Stange breiter als schulterbreit.",
+        "Drücke die Stange senkrecht nach oben, bis die Arme gestreckt sind.",
+        "Senke die Stange kontrolliert zurück in die Ausgangsposition.",
+        "Wiederhole die gewünschte Anzahl von Wiederholungen."
+      ],
+      "name_es": "Press Detrás del Cuello",
+      "instructions_es": [
+        "Siéntate o párate con una barra descansando en la parte alta de los trapecios detrás del cuello.",
+        "Agarra la barra más ancho que la anchura de los hombros.",
+        "Empuja la barra directamente sobre la cabeza hasta que los brazos estén extendidos.",
+        "Baja la barra de vuelta a la posición inicial de forma controlada.",
+        "Repite el número de repeticiones deseado."
+      ],
+      "images": {
+        "classic": [
+          "start",
+          "peak"
+        ],
+        "flat": [
+          "start",
+          "peak"
+        ]
+      }
+    },
+    {
+      "id": "bench-dips",
+      "name_en": "Bench Dips",
+      "category": "strength",
+      "force_type": "push",
+      "mechanic": "compound",
+      "difficulty": "intermediate",
+      "additional_required_equipment": [
+        "flat_bench"
+      ],
+      "body_part": "upper_arms",
+      "is_unilateral": false,
+      "is_bodyweight": true,
+      "is_placeholder": false,
+      "variation_group": "dips",
+      "goals": [
+        "hypertrophy",
+        "strength"
+      ],
+      "tags": [
+        "knee_safe",
+        "no_axial_load",
+        "lower_back_safe",
+        "requires_bench"
+      ],
+      "instructions_en": [
+        "Sit on a bench and place your hands on the edge beside your hips.",
+        "Slide your hips off the bench with legs extended.",
+        "Lower your body by bending your elbows to 90 degrees.",
+        "Press through your palms to return to the start.",
+        "Repeat for the desired number of reps."
+      ],
+      "primary_muscles": [
+        "triceps_brachii"
+      ],
+      "secondary_muscles": [
+        "anterior_deltoid",
+        "pectoralis_major"
+      ],
+      "relations": [
+        {
+          "to": "dips",
+          "type": "progression_of"
+        }
+      ],
+      "name_de": "Bank-Dips",
+      "instructions_de": [
+        "Setze dich auf eine Bank und platziere die Hände auf der Kante neben den Hüften.",
+        "Schiebe die Hüften von der Bank mit gestreckten Beinen.",
+        "Senke den Körper, indem du die Ellbogen auf 90 Grad beugst.",
+        "Drücke durch die Handflächen zurück in die Ausgangsposition.",
+        "Wiederhole die gewünschte Anzahl von Wiederholungen."
+      ],
+      "name_es": "Fondos en Banco",
+      "instructions_es": [
+        "Siéntate en un banco y coloca las manos en el borde junto a las caderas.",
+        "Desliza las caderas fuera del banco con las piernas extendidas.",
+        "Baja el cuerpo flexionando los codos hasta 90 grados.",
+        "Empuja con las palmas para volver a la posición inicial.",
+        "Repite el número de repeticiones deseado."
+      ],
+      "images": {
+        "classic": [
+          "start",
+          "peak"
+        ],
+        "flat": [
+          "start",
+          "peak"
+        ]
+      }
+    },
+    {
+      "id": "bent-arm-ez-bar-pullover",
+      "name_en": "Bent-Arm EZ-Bar Pullover",
+      "description_en": "A bent-arm pullover on a flat bench using an EZ-bar — wrist-friendlier than the straight barbell version while keeping the deep lat and pec stretch.",
+      "category": "strength",
+      "force_type": "pull",
+      "mechanic": "compound",
+      "difficulty": "intermediate",
+      "equipment": "ez_bar",
+      "additional_required_equipment": [
+        "flat_bench"
+      ],
+      "body_part": "back",
+      "is_unilateral": false,
+      "is_bodyweight": false,
+      "is_placeholder": false,
+      "variation_group": "pullover",
+      "goals": [
+        "hypertrophy",
+        "strength"
+      ],
+      "tags": [
+        "pull_day",
+        "requires_bench"
+      ],
+      "instructions_en": [
+        "Lie on a flat bench holding an EZ-bar with a narrow overhand grip on the inner bends.",
+        "Start with the bar above your chest, elbows bent to roughly 90 degrees.",
+        "Keep the elbow angle fixed and lower the bar back in an arc overhead until a deep stretch is felt in the lats and pecs.",
+        "Pull the bar back over the chest along the same arc, without straightening the elbows.",
+        "Repeat for the recommended number of repetitions."
+      ],
+      "tips_en": [
+        "The elbow angle stays fixed — only the shoulder moves.",
+        "Lighter load than a straight-arm pullover: range is longer and leverage is weaker.",
+        "If the lower back arches, plant the feet more firmly and brace the abs."
+      ],
+      "primary_muscles": [
+        "latissimus_dorsi",
+        "pectoralis_major"
+      ],
+      "secondary_muscles": [
+        "posterior_deltoid",
+        "serratus_anterior",
+        "triceps_brachii"
+      ],
+      "relations": [
+        {
+          "to": "bent-arm-barbell-pullover",
+          "type": "alternative"
+        },
+        {
+          "to": "bent-arm-barbell-pullover",
+          "type": "alternative"
+        }
+      ],
+      "name_de": "SZ-Stangen-Pullover mit gebeugten Armen",
+      "description_de": "Ein Pullover mit gebeugten Armen auf einer flachen Bank mit SZ-Stange – handgelenkschonender als die gerade Langhantelversion bei gleicher tiefer Dehnung von Latissimus und Brust.",
+      "instructions_de": [
+        "Lege dich auf eine flache Bank und halte die SZ-Stange mit engem Obergriff an den inneren Biegungen.",
+        "Starte mit der Stange über der Brust, Ellbogen auf etwa 90 Grad gebeugt.",
+        "Halte den Ellbogenwinkel fest und senke die Stange in einem Bogen über den Kopf, bis eine tiefe Dehnung in Latissimus und Brust spürbar ist.",
+        "Ziehe die Stange auf dem gleichen Bogen zurück über die Brust, ohne die Ellbogen zu strecken.",
+        "Wiederhole die empfohlene Anzahl von Wiederholungen."
+      ],
+      "tips_de": [
+        "Der Ellbogenwinkel bleibt fest – nur die Schulter bewegt sich.",
+        "Weniger Gewicht als beim Geradearm-Pullover: der Bewegungsradius ist länger und der Hebel schwächer.",
+        "Falls der untere Rücken wölbt, stelle die Füße fester auf und spanne den Bauch an."
+      ],
+      "name_es": "Pullover con Barra Z y Brazos Flexionados",
+      "description_es": "Un pullover con brazos flexionados en un banco plano usando una barra Z, más amigable para las muñecas que la versión con barra recta, manteniendo el estiramiento profundo del dorsal y el pectoral.",
+      "instructions_es": [
+        "Acuéstate en un banco plano sosteniendo una barra Z con un agarre prono estrecho en las curvas internas.",
+        "Comienza con la barra sobre el pecho, codos flexionados a aproximadamente 90 grados.",
+        "Mantén el ángulo de los codos fijo y baja la barra en un arco sobre la cabeza hasta sentir un estiramiento profundo en el dorsal y el pectoral.",
+        "Tira de la barra de vuelta sobre el pecho por el mismo arco, sin extender los codos.",
+        "Repite el número de repeticiones recomendado."
+      ],
+      "tips_es": [
+        "El ángulo de los codos permanece fijo: solo se mueve el hombro.",
+        "Carga menor que en un pullover con brazos extendidos: el rango es mayor y el brazo de palanca es menor.",
+        "Si la zona lumbar se arquea, planta los pies con más firmeza y aprieta el abdomen."
+      ],
+      "images": {
+        "classic": [
+          "start",
+          "peak"
+        ],
+        "flat": [
+          "start",
+          "peak"
+        ]
+      }
+    },
+    {
+      "id": "bulgarian-split-squat",
+      "name_en": "Bulgarian Split Squat",
+      "description_en": "A single-leg squat variation with the rear foot elevated.",
+      "category": "strength",
+      "force_type": "push",
+      "mechanic": "compound",
+      "difficulty": "intermediate",
+      "equipment": "dumbbell",
+      "additional_required_equipment": [
+        "flat_bench"
+      ],
+      "body_part": "upper_legs",
+      "is_unilateral": true,
+      "is_bodyweight": false,
+      "is_placeholder": false,
+      "variation_group": "squat",
+      "goals": [
+        "hypertrophy",
+        "strength"
+      ],
+      "tags": [
+        "leg_day",
+        "shoulder_safe",
+        "lower_back_safe",
+        "no_axial_load",
+        "requires_bench"
+      ],
+      "instructions_en": [
+        "Stand in front of a bench, place one foot behind you on the bench.",
+        "Hold dumbbells at your sides.",
+        "Lower your body until your front thigh is parallel to the floor.",
+        "Push through your front heel to stand back up.",
+        "Repeat on both sides."
+      ],
+      "primary_muscles": [
+        "gluteus_maximus",
+        "quadriceps"
+      ],
+      "secondary_muscles": [
+        "hamstrings"
+      ],
+      "relations": [
+        {
+          "to": "smith-machine-bulgarian-split",
+          "type": "alternative"
+        }
+      ],
+      "name_de": "Bulgarische Kniebeuge",
+      "description_de": "Eine einbeinige Kniebeugevariante mit erhöhtem hinteren Fuß.",
+      "instructions_de": [
+        "Steh vor einer Bank und lege einen Fuß hinter dir auf die Bank.",
+        "Halte Kurzhanteln an den Seiten.",
+        "Senke den Körper, bis der vordere Oberschenkel parallel zum Boden ist.",
+        "Drücke durch die Ferse des vorderen Fußes, um aufzustehen.",
+        "Wiederhole auf beiden Seiten."
+      ],
+      "name_es": "Sentadilla Búlgara",
+      "description_es": "Una variante de sentadilla unilateral con el pie trasero elevado.",
+      "instructions_es": [
+        "Colócate de pie frente a un banco y apoya un pie detrás sobre el banco.",
+        "Sujeta mancuernas a los lados.",
+        "Baja el cuerpo hasta que el muslo delantero quede paralelo al suelo.",
+        "Empuja con el talón delantero para volver a la posición de pie.",
+        "Repite en ambos lados."
+      ],
+      "images": {
+        "classic": [
+          "start",
+          "peak"
+        ],
+        "flat": [
+          "start",
+          "peak"
+        ]
+      }
+    },
+    {
+      "id": "cable-crunch",
+      "name_en": "Cable Crunch",
+      "category": "strength",
+      "force_type": "push",
+      "mechanic": "isolation",
+      "difficulty": "intermediate",
+      "equipment": "cable",
+      "body_part": "core",
+      "is_unilateral": false,
+      "is_bodyweight": false,
+      "is_placeholder": false,
+      "variation_group": "crunch",
+      "goals": [
+        "hypertrophy"
+      ],
+      "tags": [
+        "lower_back_safe",
+        "knee_safe",
+        "shoulder_safe",
+        "no_axial_load"
+      ],
+      "instructions_en": [
+        "Kneel in front of a cable machine with a rope attachment at the top.",
+        "Hold the rope near your forehead with elbows bent.",
+        "Crunch down by flexing your spine and bringing your elbows to your thighs.",
+        "Squeeze your abs hard at the bottom.",
+        "Return to the start position and repeat."
+      ],
+      "primary_muscles": [
+        "rectus_abdominis"
+      ],
+      "secondary_muscles": [
+        "obliques",
+        "transverse_abdominis"
+      ],
+      "name_de": "Kabelzug Crunch",
+      "instructions_de": [
+        "Knie vor dem Kabelzuggerät mit einem Seilaufsatz oben.",
+        "Halte das Seil nahe der Stirn mit gebeugten Ellbogen.",
+        "Beuge die Wirbelsäule und führe die Ellbogen zu den Oberschenkeln.",
+        "Spanne die Bauchmuskeln unten stark an.",
+        "Zurück zur Ausgangsposition und wiederhole."
+      ],
+      "name_es": "Crunch con Cable",
+      "instructions_es": [
+        "Arrodíllate frente a una máquina de cable con el accesorio de cuerda en la parte superior.",
+        "Sujeta la cuerda cerca de la frente con los codos flexionados.",
+        "Baja flexionando la columna y llevando los codos hacia los muslos.",
+        "Aprieta fuerte los abdominales en la parte inferior.",
+        "Vuelve a la posición inicial y repite."
+      ],
+      "images": {
+        "classic": [
+          "start",
+          "peak"
+        ],
+        "flat": [
+          "start",
+          "peak"
+        ]
+      }
+    },
+    {
+      "id": "cable-external-rotation",
+      "name_en": "Cable External Rotation",
+      "category": "strength",
+      "force_type": "push",
+      "mechanic": "compound",
+      "difficulty": "intermediate",
+      "equipment": "cable",
+      "body_part": "shoulders",
+      "is_unilateral": false,
+      "is_bodyweight": false,
+      "is_placeholder": false,
+      "goals": [
+        "hypertrophy",
+        "strength"
+      ],
+      "tags": [
+        "knee_safe",
+        "no_axial_load",
+        "lower_back_safe",
+        "shoulder_safe"
+      ],
+      "instructions_en": [
+        "Set a cable pulley to elbow height and grip the handle.",
+        "Stand side-on to the machine with your working elbow bent at 90 degrees.",
+        "Keep your elbow glued to your side and rotate your forearm outward.",
+        "Pause at the end of the movement.",
+        "Return under control. Complete reps on one side, then switch."
+      ],
+      "primary_muscles": [
+        "posterior_deltoid"
+      ],
+      "secondary_muscles": [
+        "rhomboids",
+        "trapezius"
+      ],
+      "name_de": "Kabelzug Außenrotation",
+      "instructions_de": [
+        "Stelle den Kabelzug auf Ellbogenhöhe ein und greife den Griff.",
+        "Steh seitlich zum Gerät, Ellbogen des Arbeitsarms im 90-Grad-Winkel.",
+        "Halte den Ellbogen fest an der Seite und rotiere den Unterarm nach außen.",
+        "Kurze Pause am Ende der Bewegung.",
+        "Kontrolliert zurück. Alle Wiederholungen auf einer Seite, dann wechseln."
+      ],
+      "name_es": "Rotación Externa con Cable",
+      "instructions_es": [
+        "Ajusta la polea a la altura del codo y agarra el handle.",
+        "Colócate de lado a la máquina con el codo de trabajo flexionado a 90 grados.",
+        "Mantén el codo pegado al costado y rota el antebrazo hacia afuera.",
+        "Pausa al final del movimiento.",
+        "Vuelve de forma controlada. Completa las repeticiones de un lado y luego cambia."
+      ],
+      "images": {
+        "classic": [
+          "start",
+          "peak"
+        ],
+        "flat": [
+          "start",
+          "peak"
+        ]
+      }
+    },
+    {
+      "id": "double-kettlebell-row",
+      "name_en": "Double Kettlebell Row",
+      "category": "strength",
+      "force_type": "pull",
+      "mechanic": "compound",
+      "difficulty": "intermediate",
+      "equipment": "kettlebell",
+      "body_part": "back",
+      "is_unilateral": false,
+      "is_bodyweight": false,
+      "is_placeholder": false,
+      "variation_group": "row",
+      "goals": [
+        "hypertrophy",
+        "strength"
+      ],
+      "tags": [
+        "knee_safe",
+        "lower_back_safe",
+        "shoulder_safe",
+        "no_axial_load"
+      ],
+      "instructions_en": [
+        "Hold a kettlebell in each hand and hinge forward at the hips.",
+        "Let your arms hang straight down from your shoulders.",
+        "Row both kettlebells to your hips by driving elbows back.",
+        "Squeeze your shoulder blades at the top.",
+        "Lower under control and repeat."
+      ],
+      "primary_muscles": [
+        "latissimus_dorsi",
+        "rhomboids"
+      ],
+      "secondary_muscles": [
+        "biceps_brachii",
+        "erector_spinae",
+        "trapezius"
+      ],
+      "name_de": "Double Kettlebell Rudern",
+      "instructions_de": [
+        "Halte je eine Kettlebell in jeder Hand und beuge dich an den Hüften nach vorne.",
+        "Lass die Arme gerade von den Schultern hängen.",
+        "Rudere beide Kettlebells zu den Hüften, indem du die Ellbogen nach hinten treibst.",
+        "Spanne die Schulterblätter oben zusammen.",
+        "Senke kontrolliert ab und wiederhole die Übung."
+      ],
+      "name_es": "Remo con Dos Pesas Rusas",
+      "instructions_es": [
+        "Sujeta una pesa rusa en cada mano e inclínate hacia adelante desde las caderas.",
+        "Deja los brazos colgando rectos desde los hombros.",
+        "Rema ambas pesas rusas hacia las caderas llevando los codos hacia atrás.",
+        "Aprieta los omóplatos en la parte superior.",
+        "Baja de forma controlada y repite."
+      ],
+      "images": {
+        "classic": [
+          "start",
+          "peak"
+        ],
+        "flat": [
+          "start",
+          "peak"
+        ]
+      }
+    },
+    {
+      "id": "dumbbell-calf-raise",
+      "name_en": "Dumbbell Calf Raise",
+      "category": "strength",
+      "force_type": "push",
+      "mechanic": "isolation",
+      "difficulty": "intermediate",
+      "equipment": "dumbbell",
+      "body_part": "lower_legs",
+      "is_unilateral": false,
+      "is_bodyweight": false,
+      "is_placeholder": false,
+      "variation_group": "calf-raise",
+      "goals": [
+        "hypertrophy"
+      ],
+      "tags": [
+        "knee_safe",
+        "shoulder_safe",
+        "lower_back_safe",
+        "no_axial_load"
+      ],
+      "instructions_en": [
+        "Stand holding a dumbbell in each hand at your sides.",
+        "Place the balls of your feet on a raised surface with heels hanging off.",
+        "Press through the balls of your feet to raise your heels as high as possible.",
+        "Squeeze your calves at the top of the movement.",
+        "Lower your heels below the platform to stretch the calves.",
+        "Repeat for the desired number of reps."
+      ],
+      "primary_muscles": [
+        "gastrocnemius",
+        "soleus"
+      ],
+      "secondary_muscles": [
+        "forearm_flexors"
+      ],
+      "relations": [
+        {
+          "to": "bodyweight-calf-raise",
+          "type": "regression_of"
+        }
+      ],
+      "name_de": "Kurzhantel Wadenheben",
+      "instructions_de": [
+        "Stehe mit je einer Kurzhantel an den Seiten.",
+        "Stelle die Fußballen auf eine erhöhte Unterlage, Fersen hängen frei.",
+        "Drücke durch die Fußballen, um die Fersen so hoch wie möglich zu heben.",
+        "Spanne die Waden oben an.",
+        "Senke die Fersen unter die Plattform, um die Waden zu dehnen.",
+        "Wiederhole die gewünschte Anzahl an Wiederholungen."
+      ],
+      "name_es": "Elevación de Talones con Mancuernas",
+      "instructions_es": [
+        "Ponte de pie sujetando una mancuerna en cada mano a los costados.",
+        "Coloca las puntas de los pies sobre una superficie elevada con los talones colgando.",
+        "Empuja a través de las puntas de los pies para subir los talones lo más alto posible.",
+        "Aprieta los gemelos en la parte superior del movimiento.",
+        "Baja los talones por debajo de la plataforma para estirar los gemelos.",
+        "Repite el número de repeticiones deseado."
+      ],
+      "images": {
+        "classic": [
+          "start",
+          "peak"
+        ],
+        "flat": [
+          "start",
+          "peak"
+        ]
+      }
+    },
+    {
+      "id": "ez-bar-overhead-extension",
+      "name_en": "EZ-Bar Overhead Tricep Extension",
+      "description_en": "Overhead tricep extension with an EZ-bar — the angled grip is easier on the wrists than a straight bar while keeping the long head under a deep stretch.",
+      "category": "strength",
+      "force_type": "push",
+      "mechanic": "isolation",
+      "difficulty": "intermediate",
+      "equipment": "ez_bar",
+      "body_part": "upper_arms",
+      "is_unilateral": false,
+      "is_bodyweight": false,
+      "is_placeholder": false,
+      "variation_group": "overhead-tricep-extension",
+      "goals": [
+        "hypertrophy"
+      ],
+      "tags": [
+        "arm_day",
+        "push_day"
+      ],
+      "instructions_en": [
+        "Stand or sit holding an EZ-bar overhead with an overhand grip on the inner bends.",
+        "Arms fully extended, bar above the head.",
+        "Bend only the elbows to lower the bar behind the head in an arc.",
+        "Keep the upper arms vertical and close to the head; only the forearms move.",
+        "Extend the elbows to return the bar overhead.",
+        "Repeat for the recommended number of repetitions."
+      ],
+      "tips_en": [
+        "If the elbows flare out, drop the load — flared elbows mean shoulders are assisting.",
+        "The deeper the stretch at the bottom, the better the long-head hypertrophy stimulus.",
+        "A seated version is easier on the lower back."
+      ],
+      "primary_muscles": [
+        "triceps_brachii"
+      ],
+      "relations": [
+        {
+          "to": "kettlebell-overhead-tricep-extension",
+          "type": "alternative"
+        },
+        {
+          "to": "overhead-tricep-extension",
+          "type": "alternative"
+        }
+      ],
+      "name_de": "SZ-Stangen Überkopf-Trizeps-Extension",
+      "description_de": "Überkopf-Trizeps-Extension mit der SZ-Stange – der gewinkelte Griff schont die Handgelenke gegenüber einer geraden Stange und hält den langen Kopf unter tiefer Dehnung.",
+      "instructions_de": [
+        "Stehe oder sitze mit der SZ-Stange im Obergriff an den inneren Winkeln über dem Kopf.",
+        "Arme vollständig gestreckt, Stange über dem Kopf.",
+        "Beuge nur die Ellbogen und senke die Stange im Bogen hinter den Kopf.",
+        "Halte die Oberarme senkrecht und nah am Kopf; nur die Unterarme bewegen sich.",
+        "Strecke die Ellbogen, um die Stange zurück über den Kopf zu führen.",
+        "Wiederhole die empfohlene Anzahl an Wiederholungen."
+      ],
+      "tips_de": [
+        "Wenn die Ellbogen ausweichen, das Gewicht reduzieren – ausweichende Ellbogen bedeuten Schulterunterstützung.",
+        "Je tiefer die Dehnung unten, desto besser der Hypertrophiereiz des langen Kopfes.",
+        "Eine sitzende Ausführung schont den unteren Rücken."
+      ],
+      "name_es": "Extensión de Tríceps por Encima de la Cabeza con Barra Z",
+      "description_es": "Extensión de tríceps por encima de la cabeza con barra Z — el agarre angulado es más cómodo para las muñecas que una barra recta y mantiene la cabeza larga bajo un estiramiento profundo.",
+      "instructions_es": [
+        "Ponte de pie o siéntate sujetando la barra Z por encima de la cabeza con agarre prono en las curvas internas.",
+        "Brazos completamente extendidos con la barra sobre la cabeza.",
+        "Dobla solo los codos para bajar la barra detrás de la cabeza en un arco.",
+        "Mantén los brazos verticales y cerca de la cabeza; solo los antebrazos se mueven.",
+        "Extiende los codos para volver la barra a la posición inicial.",
+        "Repite el número de repeticiones recomendado."
+      ],
+      "tips_es": [
+        "Si los codos se abren hacia afuera, baja el peso — significa que los hombros están ayudando.",
+        "Cuanto más profundo sea el estiramiento en la parte inferior, mayor será el estímulo de hipertrofia en la cabeza larga.",
+        "La versión sentada es más cómoda para la zona lumbar."
+      ],
+      "images": {
+        "classic": [
+          "start",
+          "peak"
+        ],
+        "flat": [
+          "start",
+          "peak"
+        ]
+      }
+    },
+    {
+      "id": "floor-kettlebell-pullover",
+      "name_en": "Floor Kettlebell Pullover",
+      "description_en": "A pullover done lying on the floor with a kettlebell held by the handle or by the horns. The floor limits the range of motion compared to the bench version, which reduces shoulder strain and makes it a good home-gym or prehab option.",
+      "category": "strength",
+      "force_type": "pull",
+      "mechanic": "compound",
+      "difficulty": "beginner",
+      "equipment": "kettlebell",
+      "equipment_alternatives": [
+        "dumbbell"
+      ],
+      "body_part": "back",
+      "is_unilateral": false,
+      "is_bodyweight": false,
+      "is_placeholder": false,
+      "variation_group": "pullover",
+      "goals": [
+        "hypertrophy"
+      ],
+      "tags": [
+        "pull_day"
+      ],
+      "instructions_en": [
+        "Lie face-up on the floor with knees bent and feet flat.",
+        "Hold a kettlebell by the handle with both hands above your chest, arms almost straight (slight elbow bend).",
+        "Keeping the elbow angle fixed, lower the bell overhead in an arc until the upper arms touch the floor.",
+        "Pull the bell back above the chest along the same arc.",
+        "Repeat for the recommended number of repetitions."
+      ],
+      "tips_en": [
+        "The floor caps the ROM; if it feels too short, use a bench version.",
+        "Grip the handle firmly and squeeze the lats at the top.",
+        "Keep the lower back flat against the floor throughout."
+      ],
+      "primary_muscles": [
+        "latissimus_dorsi",
+        "pectoralis_major"
+      ],
+      "secondary_muscles": [
+        "serratus_anterior",
+        "triceps_brachii"
+      ],
+      "name_de": "Boden Kettlebell Pullover",
+      "description_de": "Ein Pullover liegend auf dem Boden mit einer Kettlebell am Griff oder an den Hörnern. Der Boden begrenzt die Bewegungsamplitude im Vergleich zur Bankversion, was die Schulterbelastung reduziert und die Übung zu einer guten Heim- oder Prehab-Option macht.",
+      "instructions_de": [
+        "Lege dich mit gebeugten Knien und flachen Füßen auf den Rücken.",
+        "Halte eine Kettlebell am Griff mit beiden Händen über der Brust, Arme fast gestreckt (leichte Ellbeugung).",
+        "Halte den Ellbogenwinkel konstant und senke die Kettlebell im Bogen über den Kopf, bis die Oberarme den Boden berühren.",
+        "Ziehe die Kettlebell entlang desselben Bogens zurück über die Brust.",
+        "Für die empfohlene Wiederholungszahl wiederholen."
+      ],
+      "tips_de": [
+        "Der Boden begrenzt die Amplitude; falls sie zu kurz wirkt, nutze die Bankversion.",
+        "Greife den Griff fest und spanne den Latissimus oben an.",
+        "Halte den unteren Rücken während der gesamten Übung flach auf dem Boden."
+      ],
+      "name_es": "Pullover con Pesa Rusa en Suelo",
+      "description_es": "Un pullover realizado tumbado en el suelo con una pesa rusa sujetada por el asa o por las asas laterales. El suelo limita el rango de movimiento en comparación con la versión en banco, lo que reduce la tensión en los hombros y lo convierte en una buena opción para entrenar en casa o como ejercicio de prehabilitación.",
+      "instructions_es": [
+        "Túmbate boca arriba en el suelo con las rodillas flexionadas y los pies planos.",
+        "Sujeta una pesa rusa por el asa con ambas manos sobre el pecho, brazos casi extendidos (ligera flexión de codos).",
+        "Manteniendo el ángulo de los codos fijo, baja la pesa hacia atrás en arco hasta que los brazos toquen el suelo.",
+        "Tira de la pesa de vuelta sobre el pecho siguiendo el mismo arco.",
+        "Repite el número de repeticiones recomendado."
+      ],
+      "tips_es": [
+        "El suelo limita el rango de movimiento; si te parece demasiado corto, usa la versión en banco.",
+        "Agarra el asa con firmeza y aprieta los dorsales en la parte alta.",
+        "Mantén la zona lumbar pegada al suelo durante todo el ejercicio."
+      ],
+      "images": {
+        "classic": [
+          "start",
+          "peak"
+        ],
+        "flat": [
+          "start",
+          "peak"
+        ]
+      }
+    },
+    {
+      "id": "kettlebell-deadlift",
+      "name_en": "Kettlebell Deadlift",
+      "category": "strength",
+      "force_type": "pull",
+      "mechanic": "compound",
+      "difficulty": "intermediate",
+      "equipment": "kettlebell",
+      "body_part": "back",
+      "is_unilateral": false,
+      "is_bodyweight": false,
+      "is_placeholder": false,
+      "variation_group": "deadlift",
+      "goals": [
+        "hypertrophy",
+        "strength"
+      ],
+      "tags": [
+        "shoulder_safe",
+        "knee_safe"
+      ],
+      "instructions_en": [
+        "Stand with feet shoulder-width apart and kettlebell between your feet.",
+        "Hinge at the hips and bend your knees to grip the handle.",
+        "Brace your core and set your back flat.",
+        "Drive through your heels to stand up with the kettlebell.",
+        "Lock out at the top with shoulders pulled back.",
+        "Lower the kettlebell back to the floor with control."
+      ],
+      "primary_muscles": [
+        "erector_spinae",
+        "gluteus_maximus",
+        "hamstrings"
+      ],
+      "secondary_muscles": [
+        "forearm_flexors",
+        "quadriceps"
+      ],
+      "relations": [
+        {
+          "to": "kettlebell-sumo-deadlift",
+          "type": "alternative"
+        },
+        {
+          "to": "kettlebell-sumo-deadlift",
+          "type": "alternative"
+        }
+      ],
+      "name_de": "Kettlebell-Kreuzheben",
+      "instructions_de": [
+        "Steh schulterbreit, Kettlebell zwischen den Füßen.",
+        "Hüfte beugen, Knie beugen und den Griff fassen.",
+        "Rumpf anspannen, Rücken flach.",
+        "Durch die Fersen drücken und mit dem Kettlebell aufstehen.",
+        "Oben Schultern zurückziehen und einrasten.",
+        "Kettlebell kontrolliert zurück auf den Boden senken."
+      ],
+      "name_es": "Peso muerto con pesa rusa",
+      "instructions_es": [
+        "Párate con los pies a la anchura de los hombros y la pesa rusa entre los pies.",
+        "Bisagra en las caderas y flexiona las rodillas para agarrar el asa.",
+        "Contrae el core y mantén la espalda plana.",
+        "Empuja a través de los talones para ponerte de pie con la pesa rusa.",
+        "Bloquea en la parte superior con los hombros hacia atrás.",
+        "Baja la pesa rusa de vuelta al suelo con control."
+      ],
+      "images": {
+        "classic": [
+          "start",
+          "peak"
+        ],
+        "flat": [
+          "start",
+          "peak"
+        ]
+      }
+    },
+    {
+      "id": "one-arm-kettlebell-row",
+      "name_en": "One Arm Kettlebell Row",
+      "category": "strength",
+      "force_type": "pull",
+      "mechanic": "compound",
+      "difficulty": "intermediate",
+      "equipment": "kettlebell",
+      "body_part": "back",
+      "is_unilateral": true,
+      "is_bodyweight": false,
+      "is_placeholder": false,
+      "variation_group": "row",
+      "goals": [
+        "hypertrophy",
+        "strength"
+      ],
+      "tags": [
+        "knee_safe",
+        "lower_back_safe",
+        "shoulder_safe",
+        "no_axial_load"
+      ],
+      "instructions_en": [
+        "Place one hand and knee on a bench for support.",
+        "Hold a kettlebell in the opposite hand with your arm extended.",
+        "Pull the kettlebell toward your hip by driving your elbow back.",
+        "Squeeze your back at the top of the movement.",
+        "Lower the kettlebell with control.",
+        "Complete reps on one side, then switch."
+      ],
+      "primary_muscles": [
+        "latissimus_dorsi",
+        "rhomboids"
+      ],
+      "secondary_muscles": [
+        "biceps_brachii",
+        "posterior_deltoid",
+        "trapezius"
+      ],
+      "relations": [
+        {
+          "to": "single-arm-db-row",
+          "type": "alternative"
+        }
+      ],
+      "name_de": "Einarmiges Kettlebell-Rudern",
+      "instructions_de": [
+        "Stütze eine Hand und ein Knie auf einer Bank ab.",
+        "Halte eine Kettlebell mit der anderen Hand bei gestrecktem Arm.",
+        "Ziehe die Kettlebell zur Hüfte, indem du den Ellenbogen nach hinten führst.",
+        "Spanne den Rücken oben an.",
+        "Senke die Kettlebell kontrolliert.",
+        "Wiederhole auf einer Seite, dann wechseln."
+      ],
+      "name_es": "Remo con Pesa Rusa a Un Brazo",
+      "instructions_es": [
+        "Apoya una mano y una rodilla sobre un banco para sujetarte.",
+        "Sostén una pesa rusa en la mano contraria con el brazo extendido.",
+        "Jala la pesa rusa hacia la cadera llevando el codo hacia atrás.",
+        "Aprieta la espalda en la parte superior del movimiento.",
+        "Baja la pesa rusa con control.",
+        "Completa las repeticiones de un lado y luego cambia."
+      ],
+      "images": {
+        "classic": [
+          "start",
+          "peak"
+        ],
+        "flat": [
+          "start",
+          "peak"
+        ]
+      }
+    },
+    {
+      "id": "pec-deck",
+      "name_en": "Pec Deck",
+      "description_en": "A chest isolation machine with fixed elbow pads that targets the pectorals through horizontal adduction.",
+      "category": "strength",
+      "force_type": "push",
+      "mechanic": "isolation",
+      "difficulty": "beginner",
+      "equipment": "pec_deck",
+      "body_part": "chest",
+      "is_unilateral": false,
+      "is_bodyweight": false,
+      "is_placeholder": false,
+      "variation_group": "chest-fly",
+      "goals": [
+        "hypertrophy"
+      ],
+      "tags": [
+        "push_day",
+        "knee_safe",
+        "no_axial_load",
+        "lower_back_safe",
+        "shoulder_safe"
+      ],
+      "instructions_en": [
+        "Sit in the pec deck machine and place your forearms against the pads.",
+        "Adjust the seat so pads align with mid-chest height.",
+        "Squeeze the pads together in front of your chest.",
+        "Hold the contraction briefly at the center.",
+        "Return under control to the starting position.",
+        "Repeat for the desired number of reps."
+      ],
+      "primary_muscles": [
+        "pectoralis_major"
+      ],
+      "secondary_muscles": [
+        "anterior_deltoid",
+        "serratus_anterior"
+      ],
+      "relations": [
+        {
+          "to": "cable-fly",
+          "type": "alternative"
+        },
+        {
+          "to": "db-fly",
+          "type": "alternative"
+        }
+      ],
+      "name_de": "Pec Deck",
+      "description_de": "Eine Brustmaschine mit festen Ellenbogenpolstern, die den Brustmuskel durch horizontale Adduktion isoliert.",
+      "instructions_de": [
+        "Setz dich in die Pec-Deck-Maschine und lege die Unterarme gegen die Polster.",
+        "Stelle den Sitz so ein, dass die Polster auf mittlere Brusthöhe ausgerichtet sind.",
+        "Drücke die Polster vor der Brust zusammen.",
+        "Kurz in der Kontraktion halten.",
+        "Kontrolliert in die Ausgangsposition zurückführen.",
+        "Wiederhole für die gewünschte Anzahl an Wiederholungen."
+      ],
+      "name_es": "Pec Deck",
+      "description_es": "Una máquina de aislamiento de pecho con almohadillas de codo fijas que trabaja los pectorales mediante aducción horizontal.",
+      "instructions_es": [
+        "Siéntate en la máquina pec deck y coloca los antebrazos contra las almohadillas.",
+        "Ajusta el asiento para que las almohadillas queden a la altura media del pecho.",
+        "Junta las almohadillas frente al pecho apretando.",
+        "Mantén la contracción brevemente en el centro.",
+        "Regresa con control a la posición inicial.",
+        "Repite el número de repeticiones deseado."
+      ],
+      "images": {
+        "classic": [
+          "start",
+          "peak"
+        ],
+        "flat": [
+          "start",
+          "peak"
+        ]
+      }
+    },
+    {
+      "id": "push-press",
+      "name_en": "Push Press",
+      "description_en": "A barbell overhead press using leg drive to press heavier loads overhead.",
+      "category": "strength",
+      "force_type": "push",
+      "mechanic": "compound",
+      "difficulty": "intermediate",
+      "equipment": "barbell",
+      "body_part": "shoulders",
+      "is_unilateral": false,
+      "is_bodyweight": false,
+      "is_placeholder": false,
+      "variation_group": "overhead-press",
+      "goals": [
+        "strength",
+        "power"
+      ],
+      "tags": [
+        "push_day",
+        "knee_safe"
+      ],
+      "instructions_en": [
+        "Stand with a barbell racked on your front deltoids.",
+        "Dip slightly at the knees.",
+        "Drive up with your legs and press the bar overhead.",
+        "Lock out fully.",
+        "Lower to the start.",
+        "Repeat."
+      ],
+      "tips_en": [
+        "Use leg drive only to initiate — finish with the shoulders.",
+        "Keep the core braced throughout."
+      ],
+      "primary_muscles": [
+        "anterior_deltoid",
+        "lateral_deltoid"
+      ],
+      "secondary_muscles": [
+        "quadriceps",
+        "triceps_brachii"
+      ],
+      "relations": [
+        {
+          "to": "ohp",
+          "type": "regression_of"
+        }
+      ],
+      "name_de": "Push Press",
+      "description_de": "Ein Langhantel-Überkopfdrücken mit Beineinsatz, um schwerere Lasten zu bewegen.",
+      "instructions_de": [
+        "Stehe mit der Langhantel auf den vorderen Schultern.",
+        "Beuge die Knie leicht.",
+        "Drücke mit den Beinen hoch und stoße die Stange über den Kopf.",
+        "Strecke vollständig durch.",
+        "Senke zur Ausgangsposition.",
+        "Wiederhole."
+      ],
+      "tips_de": [
+        "Nutze den Beineinsatz nur zum Einleiten – die Schultern beenden die Bewegung.",
+        "Halte den Rumpf die ganze Zeit angespannt."
+      ],
+      "name_es": "Press de Empuje",
+      "description_es": "Un press de barra sobre la cabeza que usa el impulso de las piernas para empujar cargas más pesadas.",
+      "instructions_es": [
+        "Párate con la barra apoyada en los deltoides frontales.",
+        "Flexiona ligeramente las rodillas.",
+        "Impulsa con las piernas y empuja la barra sobre la cabeza.",
+        "Bloquea completamente.",
+        "Baja al inicio.",
+        "Repite."
+      ],
+      "tips_es": [
+        "Usa el impulso de las piernas solo para iniciar — termina con los hombros.",
+        "Mantén el core apretado en todo momento."
+      ],
+      "images": {
+        "classic": [
+          "start",
+          "peak"
+        ],
+        "flat": [
+          "start",
+          "peak"
+        ]
+      }
+    },
+    {
+      "id": "smith-machine-bent-over-row",
+      "name_en": "Smith Machine Bent Over Row",
+      "category": "strength",
+      "force_type": "pull",
+      "mechanic": "compound",
+      "difficulty": "beginner",
+      "equipment": "smith_machine",
+      "body_part": "back",
+      "is_unilateral": false,
+      "is_bodyweight": false,
+      "is_placeholder": false,
+      "variation_group": "row",
+      "goals": [
+        "hypertrophy",
+        "strength"
+      ],
+      "tags": [
+        "knee_safe",
+        "shoulder_safe"
+      ],
+      "instructions_en": [
+        "Stand inside a Smith machine with feet shoulder-width apart.",
+        "Grip the bar with an overhand grip slightly wider than shoulders.",
+        "Hinge at the hips until your torso is roughly 45 degrees.",
+        "Pull the bar toward your lower chest by driving your elbows back.",
+        "Squeeze your shoulder blades at the top.",
+        "Lower the bar under control and repeat."
+      ],
+      "primary_muscles": [
+        "latissimus_dorsi",
+        "rhomboids"
+      ],
+      "secondary_muscles": [
+        "biceps_brachii",
+        "erector_spinae",
+        "trapezius"
+      ],
+      "relations": [
+        {
+          "to": "barbell-row",
+          "type": "alternative"
+        },
+        {
+          "to": "cable-bent-over-row",
+          "type": "alternative"
+        }
+      ],
+      "name_de": "Smith Machine Bent Over Row",
+      "instructions_de": [
+        "Stehe im Smith Machine mit schulterbreitem Stand.",
+        "Greife die Stange mit einem Obergriff etwas breiter als schulterbreit.",
+        "Beuge die Hüfte, bis der Oberkörper ca. 45 Grad geneigt ist.",
+        "Ziehe die Stange zur unteren Brust, indem du die Ellbogen nach hinten treibst.",
+        "Ziehe die Schulterblätter oben zusammen.",
+        "Senke die Stange kontrolliert ab und wiederhole."
+      ],
+      "name_es": "Remo Inclinado en Máquina Smith",
+      "instructions_es": [
+        "De pie dentro de la máquina Smith con los pies al ancho de los hombros.",
+        "Agarra la barra en pronación ligeramente más ancho que los hombros.",
+        "Bisagra en las caderas hasta que el torso esté aproximadamente a 45 grados.",
+        "Tira de la barra hacia el pecho inferior llevando los codos hacia atrás.",
+        "Aprieta los omóplatos en la parte superior.",
+        "Baja la barra con control y repite."
+      ],
+      "images": {
+        "classic": [
+          "start",
+          "peak"
+        ],
+        "flat": [
+          "start",
+          "peak"
+        ]
+      }
+    },
+    {
+      "id": "smith-machine-squat",
+      "name_en": "Smith Machine Squat",
+      "category": "strength",
+      "force_type": "push",
+      "mechanic": "compound",
+      "difficulty": "beginner",
+      "equipment": "smith_machine",
+      "equipment_alternatives": [
+        "hack_squat"
+      ],
+      "body_part": "upper_legs",
+      "is_unilateral": false,
+      "is_bodyweight": false,
+      "is_placeholder": false,
+      "variation_group": "squat",
+      "goals": [
+        "hypertrophy",
+        "strength"
+      ],
+      "instructions_en": [
+        "Set the Smith machine bar at shoulder height and step under it.",
+        "Position the bar across your upper traps and unrack it.",
+        "Stand with feet shoulder-width apart, slightly forward of the bar.",
+        "Descend until your thighs are parallel to the floor.",
+        "Drive through your heels to return to standing.",
+        "Repeat for the desired number of reps."
+      ],
+      "primary_muscles": [
+        "gluteus_maximus",
+        "quadriceps"
+      ],
+      "secondary_muscles": [
+        "erector_spinae",
+        "gluteus_medius",
+        "hamstrings"
+      ],
+      "relations": [
+        {
+          "to": "squat",
+          "type": "alternative"
+        },
+        {
+          "to": "squat",
+          "type": "progression_of"
+        }
+      ],
+      "name_de": "Smith-Maschine Kniebeuge",
+      "instructions_de": [
+        "Stelle die Stange der Smith-Maschine auf Schulterhöhe und trete darunter.",
+        "Lege die Stange auf den oberen Trapezmuskeln ab und entracke sie.",
+        "Stehe mit schulterbreit gestellten Füßen, leicht vor der Stange.",
+        "Gehe herunter, bis die Oberschenkel parallel zum Boden sind.",
+        "Drücke durch die Fersen, um wieder aufzustehen.",
+        "Wiederhole für die gewünschte Anzahl an Wiederholungen."
+      ],
+      "name_es": "Sentadilla en Máquina Smith",
+      "instructions_es": [
+        "Ajusta la barra de la máquina Smith a la altura de los hombros y colócate debajo de ella.",
+        "Apoya la barra sobre tus trapecios superiores y desrackéala.",
+        "Párate con los pies al ancho de los hombros, ligeramente por delante de la barra.",
+        "Desciende hasta que los muslos queden paralelos al suelo.",
+        "Empuja a través de los talones para volver a la posición de pie.",
+        "Repite el número de repeticiones deseado."
+      ],
+      "images": {
+        "classic": [
+          "start",
+          "peak"
+        ],
+        "flat": [
+          "start",
+          "peak"
+        ]
+      }
+    },
+    {
+      "id": "wide-grip-seated-cable-row",
+      "name_en": "Wide Grip Seated Cable Row",
+      "description_en": "A seated rowing variation with a wide grip emphasizing the upper back.",
+      "category": "strength",
+      "force_type": "pull",
+      "mechanic": "compound",
+      "difficulty": "intermediate",
+      "equipment": "cable",
+      "body_part": "back",
+      "is_unilateral": false,
+      "is_bodyweight": false,
+      "is_placeholder": false,
+      "variation_group": "row",
+      "goals": [
+        "hypertrophy",
+        "strength"
+      ],
+      "tags": [
+        "pull_day",
+        "knee_safe",
+        "no_axial_load",
+        "lower_back_safe",
+        "shoulder_safe"
+      ],
+      "instructions_en": [
+        "Sit at a cable row station with feet on the platform.",
+        "Grip a wide bar with an overhand grip.",
+        "Pull the bar toward your upper abdomen, squeezing your shoulder blades.",
+        "Extend your arms back to the starting position with control.",
+        "Repeat."
+      ],
+      "primary_muscles": [
+        "latissimus_dorsi",
+        "rhomboids"
+      ],
+      "secondary_muscles": [
+        "biceps_brachii",
+        "posterior_deltoid"
+      ],
+      "name_de": "Sitzrudern mit breitem Griff am Kabelzug",
+      "description_de": "Eine sitzende Rudervariante mit breitem Griff, die den oberen Rücken betont.",
+      "instructions_de": [
+        "Setze dich an die Kabelruderstation mit Füßen auf der Plattform.",
+        "Greife eine breite Stange mit Obergriff.",
+        "Ziehe die Stange zum Oberbauch und spanne die Schulterblätter zusammen.",
+        "Strecke die Arme kontrolliert zur Startposition.",
+        "Wiederhole."
+      ],
+      "name_es": "Remo en Polea Sentado en Agarre Ancho",
+      "description_es": "Una variante del remo sentado con agarre ancho que hace énfasis en la parte superior de la espalda.",
+      "instructions_es": [
+        "Siéntate en la estación de remo con los pies en la plataforma.",
+        "Agarra la barra ancha con un agarre en pronación.",
+        "Tira de la barra hacia el abdomen superior apretando los omóplatos.",
+        "Extiende los brazos de vuelta a la posición inicial de forma controlada.",
+        "Repite."
+      ],
+      "images": {
+        "classic": [
+          "start",
+          "peak"
+        ],
+        "flat": [
+          "start",
+          "peak"
+        ]
+      }
+    }
+  ],
+  "muscles": {
+    "anterior_deltoid": {
+      "name_en": "Front Delts",
+      "name_de": "Vordere Schulter",
+      "name_es": "Deltoides Anterior",
+      "name_scientific": "Anterior Deltoid",
+      "region": "shoulders",
+      "synonyms": [
+        "front deltoid",
+        "anterior delt",
+        "front delt",
+        "anterior deltoid"
+      ],
+      "image": "anterior-deltoid.webp"
+    },
+    "biceps_brachii": {
+      "name_en": "Biceps",
+      "name_de": "Bizeps",
+      "name_es": "Bíceps",
+      "name_scientific": "Biceps Brachii",
+      "region": "upper_arms",
+      "synonyms": [
+        "bicep",
+        "biceps brachii",
+        "biceps muscle",
+        "guns"
+      ],
+      "image": "biceps-brachii.webp"
+    },
+    "erector_spinae": {
+      "name_en": "Lower Back",
+      "name_de": "Rückenstrecker",
+      "name_es": "Erector Espinal",
+      "name_scientific": "Erector Spinae",
+      "region": "back",
+      "synonyms": [
+        "erector spinae",
+        "spinal erectors",
+        "lower back muscles",
+        "back extensors"
+      ],
+      "image": "erector-spinae.webp"
+    },
+    "forearm_flexors": {
+      "name_en": "Forearm Flexors",
+      "name_de": "Unterarm-Flexoren",
+      "name_es": "Flexores del Antebrazo",
+      "name_scientific": "Wrist Flexor Muscles",
+      "region": "lower_arms",
+      "synonyms": [
+        "wrist flexors",
+        "flexor carpi",
+        "forearm flexors",
+        "inner forearm"
+      ],
+      "image": "forearm-flexors.webp"
+    },
+    "gastrocnemius": {
+      "name_en": "Calves",
+      "name_de": "Waden",
+      "name_es": "Gemelos",
+      "name_scientific": "Gastrocnemius",
+      "region": "lower_legs",
+      "synonyms": [
+        "calf",
+        "calves",
+        "gastrocnemius",
+        "gastroc"
+      ],
+      "image": "gastrocnemius.webp"
+    },
+    "gluteus_maximus": {
+      "name_en": "Glutes",
+      "name_de": "Gesäßmuskeln",
+      "name_es": "Glúteo Mayor",
+      "name_scientific": "Gluteus Maximus",
+      "region": "upper_legs",
+      "synonyms": [
+        "glute",
+        "glutes",
+        "gluteus maximus",
+        "buttocks",
+        "butt"
+      ],
+      "image": "gluteus-maximus.webp"
+    },
+    "gluteus_medius": {
+      "name_en": "Glute Medius",
+      "name_de": "Mittlerer Gesäßmuskel",
+      "name_es": "Glúteo Medio",
+      "name_scientific": "Gluteus Medius",
+      "region": "upper_legs",
+      "synonyms": [
+        "glute med",
+        "gluteus medius",
+        "side glute",
+        "hip abductor glute"
+      ],
+      "image": "gluteus-medius.webp"
+    },
+    "hamstrings": {
+      "name_en": "Hamstrings",
+      "name_de": "Oberschenkel-Rückseite",
+      "name_es": "Isquiotibiales",
+      "name_scientific": "Hamstring Muscles",
+      "region": "upper_legs",
+      "synonyms": [
+        "hamstring",
+        "hamstrings",
+        "posterior thigh",
+        "biceps femoris"
+      ],
+      "image": "hamstrings.webp"
+    },
+    "lateral_deltoid": {
+      "name_en": "Side Delts",
+      "name_de": "Seitliche Schulter",
+      "name_es": "Deltoides Lateral",
+      "name_scientific": "Lateral Deltoid",
+      "region": "shoulders",
+      "synonyms": [
+        "side deltoid",
+        "lateral delt",
+        "side delt",
+        "medial deltoid",
+        "lateral deltoid"
+      ],
+      "image": "lateral-deltoid.webp"
+    },
+    "latissimus_dorsi": {
+      "name_en": "Lats",
+      "name_de": "Latissimus",
+      "name_es": "Dorsal Ancho",
+      "name_scientific": "Latissimus Dorsi",
+      "region": "back",
+      "synonyms": [
+        "lats",
+        "lat",
+        "latissimus dorsi",
+        "latissimus",
+        "back wings"
+      ],
+      "image": "latissimus-dorsi.webp"
+    },
+    "obliques": {
+      "name_en": "Obliques",
+      "name_de": "Schräge Bauchmuskulatur",
+      "name_es": "Oblicuos",
+      "name_scientific": "Oblique Abdominals",
+      "region": "core",
+      "synonyms": [
+        "oblique",
+        "obliques",
+        "side abs",
+        "external oblique",
+        "internal oblique"
+      ],
+      "image": "obliques.webp"
+    },
+    "pectoralis_major": {
+      "name_en": "Chest",
+      "name_de": "Brustmuskel",
+      "name_es": "Pectoral Mayor",
+      "name_scientific": "Pectoralis Major",
+      "region": "chest",
+      "synonyms": [
+        "pec",
+        "pecs",
+        "pectoralis major",
+        "pectoralis",
+        "chest muscles"
+      ],
+      "image": "pectoralis-major.webp"
+    },
+    "posterior_deltoid": {
+      "name_en": "Rear Delts",
+      "name_de": "Hintere Schulter",
+      "name_es": "Deltoides Posterior",
+      "name_scientific": "Posterior Deltoid",
+      "region": "shoulders",
+      "synonyms": [
+        "rear deltoid",
+        "posterior delt",
+        "rear delt",
+        "back delt",
+        "posterior deltoid"
+      ],
+      "image": "posterior-deltoid.webp"
+    },
+    "quadriceps": {
+      "name_en": "Quads",
+      "name_de": "Quadrizeps",
+      "name_es": "Cuádriceps",
+      "name_scientific": "Quadriceps Femoris",
+      "region": "upper_legs",
+      "synonyms": [
+        "quad",
+        "quads",
+        "quadriceps",
+        "quadriceps femoris",
+        "front thigh"
+      ],
+      "image": "quadriceps.webp"
+    },
+    "rectus_abdominis": {
+      "name_en": "Abs",
+      "name_de": "Bauchmuskel",
+      "name_es": "Recto Abdominal",
+      "name_scientific": "Rectus Abdominis",
+      "region": "core",
+      "synonyms": [
+        "abs",
+        "six-pack",
+        "rectus abdominis",
+        "abdominals",
+        "stomach muscles"
+      ],
+      "image": "rectus-abdominis.webp"
+    },
+    "rhomboids": {
+      "name_en": "Rhomboids",
+      "name_de": "Rhomboiden",
+      "name_es": "Romboides",
+      "name_scientific": "Rhomboid Muscles",
+      "region": "back",
+      "synonyms": [
+        "rhomboid",
+        "rhomboids",
+        "rhomboid major",
+        "rhomboid minor",
+        "upper back"
+      ],
+      "image": "rhomboids.webp"
+    },
+    "serratus_anterior": {
+      "name_en": "Serratus",
+      "name_de": "Sägemuskel",
+      "name_es": "Serrato Anterior",
+      "name_scientific": "Serratus Anterior",
+      "region": "chest",
+      "synonyms": [
+        "serratus",
+        "serratus anterior",
+        "boxer's muscle",
+        "rib muscles"
+      ],
+      "image": "serratus-anterior.webp"
+    },
+    "soleus": {
+      "name_en": "Soleus",
+      "name_de": "Schollenmuskel",
+      "name_es": "Sóleo",
+      "name_scientific": "Soleus",
+      "region": "lower_legs",
+      "synonyms": [
+        "soleus",
+        "deep calf",
+        "soleus muscle"
+      ],
+      "image": "soleus.webp"
+    },
+    "transverse_abdominis": {
+      "name_en": "Deep Core",
+      "name_de": "Tiefer Bauchmuskel",
+      "name_es": "Transverso Abdominal",
+      "name_scientific": "Transversus Abdominis",
+      "region": "core",
+      "synonyms": [
+        "transverse abdominis",
+        "transversus abdominis",
+        "deep core",
+        "inner core",
+        "tvA"
+      ],
+      "image": "transverse-abdominis.webp"
+    },
+    "trapezius": {
+      "name_en": "Traps",
+      "name_de": "Trapezmuskel",
+      "name_es": "Trapecio",
+      "name_scientific": "Trapezius",
+      "region": "back",
+      "synonyms": [
+        "trap",
+        "traps",
+        "trapezius",
+        "upper traps",
+        "lower traps",
+        "mid traps"
+      ],
+      "image": "trapezius.webp"
+    },
+    "triceps_brachii": {
+      "name_en": "Triceps",
+      "name_de": "Trizeps",
+      "name_es": "Tríceps",
+      "name_scientific": "Triceps Brachii",
+      "region": "upper_arms",
+      "synonyms": [
+        "tricep",
+        "triceps",
+        "triceps brachii",
+        "horseshoe",
+        "tris"
+      ],
+      "image": "triceps-brachii.webp"
+    }
+  },
+  "equipment": {
+    "barbell": {
+      "name_en": "Barbell",
+      "tags": [
+        "free_weight"
+      ],
+      "synonyms": [
+        "bar",
+        "olympic barbell",
+        "straight bar",
+        "olympic bar",
+        "power bar"
+      ],
+      "image": "barbell.webp",
+      "name_de": "Langhantel",
+      "name_es": "Barra"
+    },
+    "cable": {
+      "name_en": "Cable Machine",
+      "tags": [
+        "cable"
+      ],
+      "synonyms": [
+        "cable pulley",
+        "functional trainer",
+        "cable crossover",
+        "cable column",
+        "cable station",
+        "pulley machine",
+        "cable tower"
+      ],
+      "image": "cable.webp",
+      "name_de": "Kabelzug",
+      "name_es": "Polea"
+    },
+    "dumbbell": {
+      "name_en": "Dumbbell",
+      "tags": [
+        "free_weight"
+      ],
+      "synonyms": [
+        "db",
+        "dumbell",
+        "hex dumbbell",
+        "rubber dumbbell",
+        "hand weight"
+      ],
+      "image": "dumbbell.webp",
+      "name_de": "Kurzhantel",
+      "name_es": "Mancuerna"
+    },
+    "ez_bar": {
+      "name_en": "EZ Curl Bar",
+      "tags": [
+        "free_weight"
+      ],
+      "synonyms": [
+        "ez bar",
+        "ez curl bar",
+        "curl bar",
+        "w-bar",
+        "cambered bar",
+        "zig-zag bar"
+      ],
+      "image": "ez-bar.webp",
+      "name_de": "SZ-Stange",
+      "name_es": "Barra Z"
+    },
+    "kettlebell": {
+      "name_en": "Kettlebell",
+      "tags": [
+        "free_weight"
+      ],
+      "synonyms": [
+        "kb",
+        "cast iron kettlebell",
+        "competition kettlebell",
+        "girya"
+      ],
+      "image": "kettlebell.webp",
+      "name_de": "Kettlebell",
+      "name_es": "Kettlebell"
+    },
+    "loop_band": {
+      "name_en": "Loop Band",
+      "tags": [
+        "band",
+        "lower_body"
+      ],
+      "synonyms": [
+        "mini band",
+        "hip band",
+        "booty band",
+        "fabric band",
+        "glute band",
+        "mini loop band"
+      ],
+      "image": "loop-band.webp",
+      "name_de": "Miniband",
+      "name_es": "Banda de resistencia circular"
+    },
+    "pec_deck": {
+      "name_en": "Pec Deck",
+      "tags": [
+        "machine",
+        "push",
+        "upper_body",
+        "chest"
+      ],
+      "synonyms": [
+        "pec deck machine",
+        "rear delt pec deck",
+        "elbow fly machine",
+        "pad fly machine",
+        "forearm fly"
+      ],
+      "image": "pec-deck.webp",
+      "name_de": "Pec Deck",
+      "name_es": "Pec deck"
+    },
+    "smith_machine": {
+      "name_en": "Smith Machine",
+      "tags": [
+        "machine"
+      ],
+      "synonyms": [
+        "smith bar",
+        "guided barbell",
+        "fixed barbell",
+        "smith press"
+      ],
+      "image": "smith-machine.webp",
+      "name_de": "Multipresse",
+      "name_es": "Máquina Smith"
+    }
+  }
+}
