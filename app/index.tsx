@@ -51,7 +51,7 @@ export default function ListScreen() {
               style={[styles.footerText, { color: t.accent, fontWeight: '600' }]}
               onPress={() => Linking.openURL('https://repdb.co/pricing')}
             >
-              Want the full 300+ catalog? See pricing →
+              Want the full 400+ catalog? See pricing →
             </Text>
           </View>
         }

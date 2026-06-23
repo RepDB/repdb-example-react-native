@@ -1,6 +1,6 @@
 # RepDB — Preview Pack License (CC BY-NC 4.0)
 
-The preview pack is a 50-exercise subset distributed under the
+The preview pack is a 21-exercise subset distributed under the
 [Creative Commons Attribution-NonCommercial 4.0 International License][cc].
 
 ## You may

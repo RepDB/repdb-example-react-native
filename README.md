@@ -45,8 +45,8 @@ Re-run `npm run gen-images` after syncing the bundle to refresh the map.
 
 This demo uses the RepDB **preview** bundle: 21 hand-picked exercises under
 [CC-BY-NC 4.0](LICENSE-preview.md). For commercial use or the full dataset
-(300+ exercises with two visual styles, transparent backgrounds, multilingual
-translations, alternative & progression relations), see
+(400+ exercises with two visual styles, transparent backgrounds, animations,
+multilingual translations, alternative & progression relations), see
 <https://repdb.co/pricing>.
 
 > Exercise data & images: RepDB (https://repdb.co)
