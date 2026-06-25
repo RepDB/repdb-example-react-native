@@ -50,8 +50,38 @@ export const IMAGES: Record<string, number> = {
   'wide-grip-seated-cable-row-start': require('../assets/images/flat/wide-grip-seated-cable-row-start.webp'),
 };
 
+// slug -> animated WebP loop module ID. Play with expo-image (stock RN
+// <Image> does not animate WebP); a slug is absent when it has no animation.
+export const ANIMATIONS: Record<string, number> = {
+  'arnold-press': require('../assets/images/animations/arnold-press.webp'),
+  'banded-lateral-walk': require('../assets/images/animations/banded-lateral-walk.webp'),
+  'barbell-glute-bridge': require('../assets/images/animations/barbell-glute-bridge.webp'),
+  'behind-the-back-barbell-shrug': require('../assets/images/animations/behind-the-back-barbell-shrug.webp'),
+  'behind-the-neck-press': require('../assets/images/animations/behind-the-neck-press.webp'),
+  'bench-dips': require('../assets/images/animations/bench-dips.webp'),
+  'bent-arm-ez-bar-pullover': require('../assets/images/animations/bent-arm-ez-bar-pullover.webp'),
+  'bulgarian-split-squat': require('../assets/images/animations/bulgarian-split-squat.webp'),
+  'cable-crunch': require('../assets/images/animations/cable-crunch.webp'),
+  'cable-external-rotation': require('../assets/images/animations/cable-external-rotation.webp'),
+  'double-kettlebell-row': require('../assets/images/animations/double-kettlebell-row.webp'),
+  'dumbbell-calf-raise': require('../assets/images/animations/dumbbell-calf-raise.webp'),
+  'ez-bar-overhead-extension': require('../assets/images/animations/ez-bar-overhead-extension.webp'),
+  'floor-kettlebell-pullover': require('../assets/images/animations/floor-kettlebell-pullover.webp'),
+  'kettlebell-deadlift': require('../assets/images/animations/kettlebell-deadlift.webp'),
+  'one-arm-kettlebell-row': require('../assets/images/animations/one-arm-kettlebell-row.webp'),
+  'pec-deck': require('../assets/images/animations/pec-deck.webp'),
+  'push-press': require('../assets/images/animations/push-press.webp'),
+  'smith-machine-bent-over-row': require('../assets/images/animations/smith-machine-bent-over-row.webp'),
+  'smith-machine-squat': require('../assets/images/animations/smith-machine-squat.webp'),
+  'wide-grip-seated-cable-row': require('../assets/images/animations/wide-grip-seated-cable-row.webp'),
+};
+
 export type ImageVariant = 'start' | 'peak';
 
 export function getImage(slug: string, variant: ImageVariant): number | undefined {
   return IMAGES[`${slug}-${variant}`];
+}
+
+export function getAnimation(slug: string): number | undefined {
+  return ANIMATIONS[slug];
 }

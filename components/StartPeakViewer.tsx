@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Animated, Pressable, StyleSheet, Text, View } from 'react-native';
-import { getImage } from '../lib/images';
+import { Image as ExpoImage } from 'expo-image';
+import { getAnimation, getImage } from '../lib/images';
 import { useTheme } from '../lib/theme';
 
 interface Props {
@@ -11,13 +12,37 @@ interface Props {
 }
 
 /**
- * Cross-fades between the start and peak frames every `interval` ms.
- * Tap to pause/resume.
+ * Shows the real animated WebP loop when the exercise ships one (via
+ * expo-image — stock RN <Image> can't animate WebP). Falls back to a
+ * cross-fade between the start and peak frames otherwise; tap to pause/resume.
  */
 export function StartPeakViewer({ slug, alt, interval = 1600 }: Props) {
   const t = useTheme();
+  const animation = getAnimation(slug);
   const start = getImage(slug, 'start');
   const peak = getImage(slug, 'peak');
+
+  if (animation) {
+    return (
+      <View
+        style={[styles.frame, { backgroundColor: t.imageBg, borderColor: t.border }]}
+        accessibilityRole="image"
+        accessibilityLabel={alt}
+      >
+        <ExpoImage
+          source={animation}
+          contentFit="contain"
+          autoplay
+          style={styles.image}
+        />
+        <View style={[styles.badge, { backgroundColor: t.surface, borderColor: t.border }]}>
+          <Text style={{ color: t.muted, fontSize: 10.5, fontWeight: '700', letterSpacing: 1 }}>
+            LOOP
+          </Text>
+        </View>
+      </View>
+    );
+  }
   const fade = useRef(new Animated.Value(0)).current; // 0 = start, 1 = peak
   const [showingPeak, setShowingPeak] = useState(false);
   const [paused, setPaused] = useState(false);
