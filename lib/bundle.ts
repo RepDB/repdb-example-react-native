@@ -17,18 +17,60 @@ export interface Exercise {
   instructions_de?: string[];
   instructions_es?: string[];
   images?: { flat?: ('start' | 'peak')[]; classic?: ('start' | 'peak')[] };
+  animation?: boolean;
+  met?: number;
+}
+
+/** A muscle or equipment entry from the bundle taxonomy. */
+export interface TaxonomyEntry {
+  name_en: string;
+  name_de?: string;
+  name_es?: string;
+  image?: string;
 }
 
 interface Bundle {
   schema_version: number;
   locales: Locale[];
   exercises: Exercise[];
+  muscles?: Record<string, TaxonomyEntry>;
+  equipment?: Record<string, TaxonomyEntry>;
 }
 
 const BUNDLE = bundleJson as unknown as Bundle;
 
 export const EXERCISES: Exercise[] = BUNDLE.exercises;
 export const LOCALES: Locale[] = BUNDLE.locales;
+export const MUSCLES: Record<string, TaxonomyEntry> = BUNDLE.muscles ?? {};
+export const EQUIPMENT: Record<string, TaxonomyEntry> = BUNDLE.equipment ?? {};
+
+/** True when the exercise ships both flat and classic stills (toggle-able). */
+export function hasBothStyles(ex: Exercise): boolean {
+  return Boolean(ex.images?.flat?.length && ex.images?.classic?.length);
+}
+
+function localized(entry: TaxonomyEntry | undefined, locale: Locale, fallback: string): string {
+  if (!entry) return fallback;
+  if (locale === 'de' && entry.name_de) return entry.name_de;
+  if (locale === 'es' && entry.name_es) return entry.name_es;
+  return entry.name_en;
+}
+
+export function muscleLabel(key: string, locale: Locale): string {
+  return localized(MUSCLES[key], locale, prettyEnum(key));
+}
+
+export function muscleImageFile(key: string): string | undefined {
+  return MUSCLES[key]?.image;
+}
+
+export function equipmentLabel(key: string, locale: Locale): string {
+  return localized(EQUIPMENT[key], locale, prettyEnum(key));
+}
+
+export function equipmentImageFile(key: string): string | undefined {
+  return EQUIPMENT[key]?.image;
+}
 
 export function exerciseName(ex: Exercise, locale: Locale): string {
   if (locale === 'de' && ex.name_de) return ex.name_de;

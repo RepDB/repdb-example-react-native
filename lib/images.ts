@@ -2,9 +2,13 @@
 // run `npm run gen-images` after syncing the bundle.
 //
 // React Native's Metro bundler resolves `require()` of static assets at
-// build time only. We map slug-variant -> module ID so other code can do
-// `getImage('arnold-press', 'peak')` without dynamic require.
+// build time only. We map a string key -> module ID so other code can resolve
+// assets without a dynamic require.
 
+export type ImageVariant = 'start' | 'peak';
+export type ImageStyle = 'flat' | 'classic';
+
+// slug-variant -> module ID, white-background flat stills.
 export const IMAGES: Record<string, number> = {
   'arnold-press-peak': require('../assets/images/flat/arnold-press-peak.webp'),
   'arnold-press-start': require('../assets/images/flat/arnold-press-start.webp'),
@@ -50,6 +54,52 @@ export const IMAGES: Record<string, number> = {
   'wide-grip-seated-cable-row-start': require('../assets/images/flat/wide-grip-seated-cable-row-start.webp'),
 };
 
+// slug-variant -> module ID, transparent matte-clay classic stills.
+export const CLASSIC: Record<string, number> = {
+  'arnold-press-peak': require('../assets/images/classic/arnold-press-peak.webp'),
+  'arnold-press-start': require('../assets/images/classic/arnold-press-start.webp'),
+  'banded-lateral-walk-peak': require('../assets/images/classic/banded-lateral-walk-peak.webp'),
+  'banded-lateral-walk-start': require('../assets/images/classic/banded-lateral-walk-start.webp'),
+  'barbell-glute-bridge-peak': require('../assets/images/classic/barbell-glute-bridge-peak.webp'),
+  'barbell-glute-bridge-start': require('../assets/images/classic/barbell-glute-bridge-start.webp'),
+  'behind-the-back-barbell-shrug-peak': require('../assets/images/classic/behind-the-back-barbell-shrug-peak.webp'),
+  'behind-the-back-barbell-shrug-start': require('../assets/images/classic/behind-the-back-barbell-shrug-start.webp'),
+  'behind-the-neck-press-peak': require('../assets/images/classic/behind-the-neck-press-peak.webp'),
+  'behind-the-neck-press-start': require('../assets/images/classic/behind-the-neck-press-start.webp'),
+  'bench-dips-peak': require('../assets/images/classic/bench-dips-peak.webp'),
+  'bench-dips-start': require('../assets/images/classic/bench-dips-start.webp'),
+  'bent-arm-ez-bar-pullover-peak': require('../assets/images/classic/bent-arm-ez-bar-pullover-peak.webp'),
+  'bent-arm-ez-bar-pullover-start': require('../assets/images/classic/bent-arm-ez-bar-pullover-start.webp'),
+  'bulgarian-split-squat-peak': require('../assets/images/classic/bulgarian-split-squat-peak.webp'),
+  'bulgarian-split-squat-start': require('../assets/images/classic/bulgarian-split-squat-start.webp'),
+  'cable-crunch-peak': require('../assets/images/classic/cable-crunch-peak.webp'),
+  'cable-crunch-start': require('../assets/images/classic/cable-crunch-start.webp'),
+  'cable-external-rotation-peak': require('../assets/images/classic/cable-external-rotation-peak.webp'),
+  'cable-external-rotation-start': require('../assets/images/classic/cable-external-rotation-start.webp'),
+  'double-kettlebell-row-peak': require('../assets/images/classic/double-kettlebell-row-peak.webp'),
+  'double-kettlebell-row-start': require('../assets/images/classic/double-kettlebell-row-start.webp'),
+  'dumbbell-calf-raise-peak': require('../assets/images/classic/dumbbell-calf-raise-peak.webp'),
+  'dumbbell-calf-raise-start': require('../assets/images/classic/dumbbell-calf-raise-start.webp'),
+  'ez-bar-overhead-extension-peak': require('../assets/images/classic/ez-bar-overhead-extension-peak.webp'),
+  'ez-bar-overhead-extension-start': require('../assets/images/classic/ez-bar-overhead-extension-start.webp'),
+  'floor-kettlebell-pullover-peak': require('../assets/images/classic/floor-kettlebell-pullover-peak.webp'),
+  'floor-kettlebell-pullover-start': require('../assets/images/classic/floor-kettlebell-pullover-start.webp'),
+  'kettlebell-deadlift-peak': require('../assets/images/classic/kettlebell-deadlift-peak.webp'),
+  'kettlebell-deadlift-start': require('../assets/images/classic/kettlebell-deadlift-start.webp'),
+  'one-arm-kettlebell-row-peak': require('../assets/images/classic/one-arm-kettlebell-row-peak.webp'),
+  'one-arm-kettlebell-row-start': require('../assets/images/classic/one-arm-kettlebell-row-start.webp'),
+  'pec-deck-peak': require('../assets/images/classic/pec-deck-peak.webp'),
+  'pec-deck-start': require('../assets/images/classic/pec-deck-start.webp'),
+  'push-press-peak': require('../assets/images/classic/push-press-peak.webp'),
+  'push-press-start': require('../assets/images/classic/push-press-start.webp'),
+  'smith-machine-bent-over-row-peak': require('../assets/images/classic/smith-machine-bent-over-row-peak.webp'),
+  'smith-machine-bent-over-row-start': require('../assets/images/classic/smith-machine-bent-over-row-start.webp'),
+  'smith-machine-squat-peak': require('../assets/images/classic/smith-machine-squat-peak.webp'),
+  'smith-machine-squat-start': require('../assets/images/classic/smith-machine-squat-start.webp'),
+  'wide-grip-seated-cable-row-peak': require('../assets/images/classic/wide-grip-seated-cable-row-peak.webp'),
+  'wide-grip-seated-cable-row-start': require('../assets/images/classic/wide-grip-seated-cable-row-start.webp'),
+};
+
 // slug -> animated WebP loop module ID. Play with expo-image (stock RN
 // <Image> does not animate WebP); a slug is absent when it has no animation.
 export const ANIMATIONS: Record<string, number> = {
@@ -76,12 +126,60 @@ export const ANIMATIONS: Record<string, number> = {
   'wide-grip-seated-cable-row': require('../assets/images/animations/wide-grip-seated-cable-row.webp'),
 };
 
-export type ImageVariant = 'start' | 'peak';
+// icon basename (e.g. 'anterior-deltoid') -> module ID.
+export const MUSCLE_ICONS: Record<string, number> = {
+  'anterior-deltoid': require('../assets/images/muscles/anterior-deltoid.webp'),
+  'biceps-brachii': require('../assets/images/muscles/biceps-brachii.webp'),
+  'erector-spinae': require('../assets/images/muscles/erector-spinae.webp'),
+  'forearm-flexors': require('../assets/images/muscles/forearm-flexors.webp'),
+  'gastrocnemius': require('../assets/images/muscles/gastrocnemius.webp'),
+  'gluteus-maximus': require('../assets/images/muscles/gluteus-maximus.webp'),
+  'gluteus-medius': require('../assets/images/muscles/gluteus-medius.webp'),
+  'hamstrings': require('../assets/images/muscles/hamstrings.webp'),
+  'lateral-deltoid': require('../assets/images/muscles/lateral-deltoid.webp'),
+  'latissimus-dorsi': require('../assets/images/muscles/latissimus-dorsi.webp'),
+  'obliques': require('../assets/images/muscles/obliques.webp'),
+  'pectoralis-major': require('../assets/images/muscles/pectoralis-major.webp'),
+  'posterior-deltoid': require('../assets/images/muscles/posterior-deltoid.webp'),
+  'quadriceps': require('../assets/images/muscles/quadriceps.webp'),
+  'rectus-abdominis': require('../assets/images/muscles/rectus-abdominis.webp'),
+  'rhomboids': require('../assets/images/muscles/rhomboids.webp'),
+  'serratus-anterior': require('../assets/images/muscles/serratus-anterior.webp'),
+  'soleus': require('../assets/images/muscles/soleus.webp'),
+  'transverse-abdominis': require('../assets/images/muscles/transverse-abdominis.webp'),
+  'trapezius': require('../assets/images/muscles/trapezius.webp'),
+  'triceps-brachii': require('../assets/images/muscles/triceps-brachii.webp'),
+};
 
-export function getImage(slug: string, variant: ImageVariant): number | undefined {
-  return IMAGES[`${slug}-${variant}`];
+export const EQUIPMENT_ICONS: Record<string, number> = {
+  'barbell': require('../assets/images/equipment/barbell.webp'),
+  'cable': require('../assets/images/equipment/cable.webp'),
+  'dumbbell': require('../assets/images/equipment/dumbbell.webp'),
+  'ez-bar': require('../assets/images/equipment/ez-bar.webp'),
+  'kettlebell': require('../assets/images/equipment/kettlebell.webp'),
+  'loop-band': require('../assets/images/equipment/loop-band.webp'),
+  'pec-deck': require('../assets/images/equipment/pec-deck.webp'),
+  'smith-machine': require('../assets/images/equipment/smith-machine.webp'),
+};
+
+export function getImage(
+  slug: string,
+  variant: ImageVariant,
+  style: ImageStyle = 'flat',
+): number | undefined {
+  const map = style === 'classic' ? CLASSIC : IMAGES;
+  return map[`${slug}-${variant}`];
 }
 
 export function getAnimation(slug: string): number | undefined {
   return ANIMATIONS[slug];
+}
+
+// `file` is the taxonomy `image` value, e.g. 'anterior-deltoid.webp'.
+export function getMuscleIcon(file: string | undefined): number | undefined {
+  return file ? MUSCLE_ICONS[file.replace(/.webp$/, '')] : undefined;
+}
+
+export function getEquipmentIcon(file: string | undefined): number | undefined {
+  return file ? EQUIPMENT_ICONS[file.replace(/.webp$/, '')] : undefined;
 }

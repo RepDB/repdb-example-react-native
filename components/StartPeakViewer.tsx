@@ -1,48 +1,27 @@
 import { useEffect, useRef, useState } from 'react';
 import { Animated, Pressable, StyleSheet, Text, View } from 'react-native';
-import { Image as ExpoImage } from 'expo-image';
-import { getAnimation, getImage } from '../lib/images';
+import { getImage, type ImageStyle } from '../lib/images';
 import { useTheme } from '../lib/theme';
 
 interface Props {
   slug: string;
   alt: string;
+  /** Which still style to show: 'flat' (white bg) or 'classic' (transparent). */
+  style?: ImageStyle;
   /** Toggle interval in ms. Set to 0 to pause auto-toggle. */
   interval?: number;
 }
 
 /**
- * Shows the real animated WebP loop when the exercise ships one (via
- * expo-image — stock RN <Image> can't animate WebP). Falls back to a
- * cross-fade between the start and peak frames otherwise; tap to pause/resume.
+ * Cross-fades between the start and peak frames every `interval` ms, in the
+ * requested visual style. Tap to pause/resume. The looping animation is a
+ * separate component (AnimationViewer).
  */
-export function StartPeakViewer({ slug, alt, interval = 1600 }: Props) {
+export function StartPeakViewer({ slug, alt, style = 'flat', interval = 1600 }: Props) {
   const t = useTheme();
-  const animation = getAnimation(slug);
-  const start = getImage(slug, 'start');
-  const peak = getImage(slug, 'peak');
+  const start = getImage(slug, 'start', style);
+  const peak = getImage(slug, 'peak', style);
 
-  if (animation) {
-    return (
-      <View
-        style={[styles.frame, { backgroundColor: t.imageBg, borderColor: t.border }]}
-        accessibilityRole="image"
-        accessibilityLabel={alt}
-      >
-        <ExpoImage
-          source={animation}
-          contentFit="contain"
-          autoplay
-          style={styles.image}
-        />
-        <View style={[styles.badge, { backgroundColor: t.surface, borderColor: t.border }]}>
-          <Text style={{ color: t.muted, fontSize: 10.5, fontWeight: '700', letterSpacing: 1 }}>
-            LOOP
-          </Text>
-        </View>
-      </View>
-    );
-  }
   const fade = useRef(new Animated.Value(0)).current; // 0 = start, 1 = peak
   const [showingPeak, setShowingPeak] = useState(false);
   const [paused, setPaused] = useState(false);
