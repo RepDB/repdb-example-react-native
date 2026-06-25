@@ -6,8 +6,8 @@ A small Expo Router starter that browses 21 fitness exercises from the
 ## Features
 
 - Single-screen list of exercises (FlatList) with thumbnail + tags
-- Detail screen with **animated start↔peak cross-fade** every ~1.6 s — tap
-  to pause/resume
+- Detail screen with a **real looping animated WebP** (via `expo-image`), with a
+  start↔peak cross-fade as the fallback for any exercise without an animation
 - EN / DE / ES locale switch (translates exercise data — UI strings are EN)
 - Light + dark themes that follow the OS setting
 - Builds on iOS, Android, and Web from the same source
