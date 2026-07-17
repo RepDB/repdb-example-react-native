@@ -18,8 +18,8 @@ const webps = (dir) =>
     : [];
 
 // Build a `'key': require('<dir>/<file>'),` block. `key` is the filename
-// without the .webp extension (slug-variant for stills, slug for the sample
-// animation, icon basename for muscles/equipment).
+// without the .webp extension (slug-variant for flat stills, bare slug for the
+// sample animations, icon basename for muscles/equipment).
 const block = (dir) =>
   webps(dir)
     .map((f) => `  '${f.replace(/\.webp$/, '')}': require('../${dir}/${f}'),`)
@@ -45,10 +45,9 @@ export const IMAGES: Record<string, number> = {
 ${block('assets/images/flat')}
 };
 
-// Standard-tier teaser assets (evaluation only). A handful of sample slugs get
-// paid-tier 'start'/'peak' stills (transparent matte-clay) plus, for
-// mountain-climbers, a bare-slug looping animation. The sample-slug set is
-// DERIVED from these keys (see SAMPLE_SLUGS) — never hardcoded elsewhere.
+// slug -> module ID, Standard-tier looping animations (transparent WebP) — the
+// exact clips shown on repdb.co. Evaluation only. One animation per slug; the
+// paid-tier preview gallery is DERIVED from these keys (see SAMPLE_SLUGS).
 export const SAMPLES: Record<string, number> = {
 ${block('assets/images/samples')}
 };
@@ -67,28 +66,14 @@ export function getImage(slug: string, variant: ImageVariant): number | undefine
   return IMAGES[\`\${slug}-\${variant}\`];
 }
 
-/** Standard-tier teaser still, or undefined if this slug ships no sample. */
-export function getSample(slug: string, variant: ImageVariant): number | undefined {
-  return SAMPLES[\`\${slug}-\${variant}\`];
-}
-
 /** Standard-tier looping animation module ID, or undefined if none ships. */
 export function getSampleAnimation(slug: string): number | undefined {
   return SAMPLES[slug];
 }
 
-// Sample slugs, derived from the SAMPLES still keys (\`<slug>-start\`) — the one
-// source of truth for "which exercises get the paid-tier teaser".
-export const SAMPLE_SLUGS: string[] = Object.keys(SAMPLES)
-  .map((k) => /^(.+)-start$/.exec(k)?.[1])
-  .filter((s): s is string => Boolean(s))
-  .sort();
-
-const SAMPLE_SLUG_SET = new Set(SAMPLE_SLUGS);
-
-export function isSampleSlug(slug: string): boolean {
-  return SAMPLE_SLUG_SET.has(slug);
-}
+// The sample slugs, straight from the SAMPLES keys — the one source of truth
+// for the paid-tier preview gallery. Sorted for a stable render order.
+export const SAMPLE_SLUGS: string[] = Object.keys(SAMPLES).sort();
 
 // \`file\` is the taxonomy \`image\` value, e.g. 'anterior-deltoid.webp'.
 export function getMuscleIcon(file: string | undefined): number | undefined {
@@ -102,6 +87,6 @@ export function getEquipmentIcon(file: string | undefined): number | undefined {
 
 writeFileSync(OUT, out);
 console.log(
-  `Generated ${flat.length} flat + ${samples.length} sample + ` +
+  `Generated ${flat.length} flat + ${samples.length} sample animation + ` +
     `${muscles.length} muscle + ${equipment.length} equipment -> lib/images.ts`,
 );

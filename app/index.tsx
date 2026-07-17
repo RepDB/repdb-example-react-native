@@ -4,6 +4,7 @@ import { FlatList, Linking, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { ExerciseListItem } from '../components/ExerciseListItem';
 import { LocaleSwitcher } from '../components/LocaleSwitcher';
+import { SampleGallery } from '../components/SampleGallery';
 import { EXERCISES, type Locale, exerciseName } from '../lib/bundle';
 import { useTheme } from '../lib/theme';
 
@@ -43,17 +44,20 @@ export default function ListScreen() {
           />
         )}
         ListFooterComponent={
-          <View style={[styles.footer, { borderTopColor: t.border }]}>
-            <Text style={[styles.footerText, { color: t.muted }]}>
-              Exercise data by RepDB (repdb.co) — free tier, attribution required.
-            </Text>
-            <Text
-              style={[styles.footerText, { color: t.accent, fontWeight: '600' }]}
-              onPress={() => Linking.openURL('https://repdb.co/pricing')}
-            >
-              Want the full, growing catalog? See pricing →
-            </Text>
-          </View>
+          <>
+            <SampleGallery locale={locale} />
+            <View style={[styles.footer, { borderTopColor: t.border }]}>
+              <Text style={[styles.footerText, { color: t.muted }]}>
+                Exercise data by RepDB (repdb.co) — free tier, attribution required.
+              </Text>
+              <Text
+                style={[styles.footerText, { color: t.accent, fontWeight: '600' }]}
+                onPress={() => Linking.openURL('https://repdb.co/pricing')}
+              >
+                Want the full, growing catalog? See pricing →
+              </Text>
+            </View>
+          </>
         }
       />
     </SafeAreaView>

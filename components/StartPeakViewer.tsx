@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Animated, Image, Pressable, StyleSheet, Text, View } from 'react-native';
-import { getImage, getSample, type ImageVariant } from '../lib/images';
+import { getImage, type ImageVariant } from '../lib/images';
 import { useTheme } from '../lib/theme';
 
 interface Props {
@@ -9,27 +9,21 @@ interface Props {
   alt: string;
   /** Flat frames the exercise ships: ["start","peak"] or ["main"]. */
   variants: ImageVariant[];
-  /** Pull frames from the Standard-tier sample set instead of the free flat set. */
-  sample?: boolean;
   /** Cross-fade interval in ms. Set to 0 to pause auto-toggle. */
   interval?: number;
 }
 
 /**
- * Renders an exercise's frames. A start/peak pair cross-fades every `interval`
- * ms (tap to pause/resume); a single `main` pose renders statically. When
- * `sample` is set it draws from the Standard-tier teaser stills. The looping
- * animation is a separate component (AnimationViewer).
+ * Renders an exercise's free-tier flat frames. A start/peak pair cross-fades
+ * every `interval` ms (tap to pause/resume); a single `main` pose renders
+ * statically.
  */
-export function StartPeakViewer({ slug, alt, variants, sample = false, interval = 1600 }: Props) {
+export function StartPeakViewer({ slug, alt, variants, interval = 1600 }: Props) {
   const t = useTheme();
-  const resolve = (variant: ImageVariant) =>
-    sample ? getSample(slug, variant) : getImage(slug, variant);
-
   const isPair = variants.includes('start') && variants.includes('peak');
-  const start = resolve('start');
-  const peak = resolve('peak');
-  const single = resolve(variants.find((v) => v === 'main') ?? variants[0] ?? 'main');
+  const start = getImage(slug, 'start');
+  const peak = getImage(slug, 'peak');
+  const single = getImage(slug, variants.find((v) => v === 'main') ?? variants[0] ?? 'main');
 
   const fade = useRef(new Animated.Value(0)).current; // 0 = start, 1 = peak
   const [showingPeak, setShowingPeak] = useState(false);

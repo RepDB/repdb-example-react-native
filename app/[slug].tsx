@@ -1,8 +1,6 @@
-import { useState } from 'react';
 import { Stack, useLocalSearchParams } from 'expo-router';
-import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { Pill } from '../components/Pill';
-import { AnimationViewer } from '../components/AnimationViewer';
 import { StartPeakViewer } from '../components/StartPeakViewer';
 import {
   equipmentImageFile,
@@ -17,7 +15,7 @@ import {
   muscleLabel,
   prettyEnum,
 } from '../lib/bundle';
-import { getEquipmentIcon, getMuscleIcon, getSampleAnimation, isSampleSlug } from '../lib/images';
+import { getEquipmentIcon, getMuscleIcon } from '../lib/images';
 import { useTheme } from '../lib/theme';
 
 export default function DetailScreen() {
@@ -28,7 +26,6 @@ export default function DetailScreen() {
   }>();
   const locale: Locale =
     localeRaw === 'de' || localeRaw === 'es' ? localeRaw : 'en';
-  const [showSample, setShowSample] = useState(false);
   const exercise = findExercise(slug);
 
   if (!exercise) {
@@ -44,8 +41,6 @@ export default function DetailScreen() {
   const instructions = exerciseInstructions(exercise, locale);
   const base = imageBase(exercise);
   const variants = flatVariants(exercise);
-  const isSample = isSampleSlug(exercise.id); // sample slugs are never aliased
-  const hasSampleAnimation = isSample && getSampleAnimation(exercise.id) !== undefined;
   const equipIcon = exercise.equipment
     ? getEquipmentIcon(equipmentImageFile(exercise.equipment))
     : undefined;
@@ -67,16 +62,7 @@ export default function DetailScreen() {
         {typeof exercise.met === 'number' ? <Pill label={`MET · ${exercise.met}`} /> : null}
       </View>
 
-      {isSample ? <AnimationViewer slug={exercise.id} alt={`${name} — animation`} /> : null}
-
-      {isSample ? (
-        <StyleToggle
-          value={showSample}
-          onChange={setShowSample}
-          showBadge={showSample && !hasSampleAnimation}
-        />
-      ) : null}
-      <StartPeakViewer slug={base} alt={name} variants={variants} sample={isSample && showSample} />
+      <StartPeakViewer slug={base} alt={name} variants={variants} />
       {variants.length > 1 ? (
         <Text style={[styles.viewerHint, { color: t.muted }]}>
           Tap the frames to pause / resume the cross-fade.
@@ -107,63 +93,6 @@ export default function DetailScreen() {
         locale={locale}
       />
     </ScrollView>
-  );
-}
-
-/**
- * Flat ↔ Standard still toggle, shown only for the sample slugs. "Flat" is the
- * free-tier white-background frame; "Standard" is the paid-tier transparent
- * matte-clay teaser. The "Standard tier preview" badge appears only while the
- * Standard style is selected, and is suppressed when the AnimationViewer above
- * already shows its own badge (`showBadge` is decided by the caller).
- */
-function StyleToggle({
-  value,
-  onChange,
-  showBadge,
-}: {
-  value: boolean;
-  onChange: (showSample: boolean) => void;
-  showBadge: boolean;
-}) {
-  const t = useTheme();
-  const options: [boolean, string][] = [
-    [false, 'Flat'],
-    [true, 'Standard'],
-  ];
-  return (
-    <View style={styles.toggleRow}>
-      <Text style={[styles.cardTitle, { color: t.muted }]}>STYLE</Text>
-      <View style={[styles.toggle, { borderColor: t.border, backgroundColor: t.surface }]}>
-        {options.map(([opt, label]) => {
-          const on = opt === value;
-          return (
-            <Pressable
-              key={label}
-              onPress={() => onChange(opt)}
-              accessibilityRole="button"
-              accessibilityState={{ selected: on }}
-              style={[styles.toggleBtn, on && { backgroundColor: t.accent }]}
-            >
-              <Text
-                style={{
-                  fontSize: 12,
-                  fontWeight: on ? '700' : '500',
-                  color: on ? '#fff' : t.muted,
-                }}
-              >
-                {label}
-              </Text>
-            </Pressable>
-          );
-        })}
-      </View>
-      {showBadge ? (
-        <View style={[styles.teaser, { borderColor: t.accent }]}>
-          <Text style={[styles.teaserText, { color: t.accent }]}>STANDARD TIER PREVIEW</Text>
-        </View>
-      ) : null}
-    </View>
   );
 }
 
@@ -201,21 +130,6 @@ const styles = StyleSheet.create({
   content: { padding: 16, gap: 16, paddingBottom: 40 },
   notFound: { flex: 1, alignItems: 'center', justifyContent: 'center' },
   tags: { flexDirection: 'row', flexWrap: 'wrap', alignItems: 'center', gap: 6 },
-  toggleRow: { flexDirection: 'row', alignItems: 'center', gap: 8, marginBottom: -8 },
-  toggle: {
-    flexDirection: 'row',
-    borderRadius: 8,
-    borderWidth: StyleSheet.hairlineWidth,
-    padding: 2,
-  },
-  toggleBtn: { paddingHorizontal: 12, paddingVertical: 4, borderRadius: 6 },
-  teaser: {
-    paddingHorizontal: 8,
-    paddingVertical: 3,
-    borderRadius: 6,
-    borderWidth: StyleSheet.hairlineWidth,
-  },
-  teaserText: { fontSize: 9.5, fontWeight: '700', letterSpacing: 0.6 },
   viewerHint: { fontSize: 11, textAlign: 'center', marginTop: -8 },
   card: {
     padding: 14,

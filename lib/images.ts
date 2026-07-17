@@ -757,22 +757,15 @@ export const IMAGES: Record<string, number> = {
   'wrist-roller-main': require('../assets/images/flat/wrist-roller-main.webp'),
 };
 
-// Standard-tier teaser assets (evaluation only). A handful of sample slugs get
-// paid-tier 'start'/'peak' stills (transparent matte-clay) plus, for
-// mountain-climbers, a bare-slug looping animation. The sample-slug set is
-// DERIVED from these keys (see SAMPLE_SLUGS) — never hardcoded elsewhere.
+// slug -> module ID, Standard-tier looping animations (transparent WebP) — the
+// exact clips shown on repdb.co. Evaluation only. One animation per slug; the
+// paid-tier preview gallery is DERIVED from these keys (see SAMPLE_SLUGS).
 export const SAMPLES: Record<string, number> = {
-  'bench-press-peak': require('../assets/images/samples/bench-press-peak.webp'),
-  'bench-press-start': require('../assets/images/samples/bench-press-start.webp'),
-  'deadlift-peak': require('../assets/images/samples/deadlift-peak.webp'),
-  'deadlift-start': require('../assets/images/samples/deadlift-start.webp'),
-  'kettlebell-swing-peak': require('../assets/images/samples/kettlebell-swing-peak.webp'),
-  'kettlebell-swing-start': require('../assets/images/samples/kettlebell-swing-start.webp'),
-  'mountain-climbers-peak': require('../assets/images/samples/mountain-climbers-peak.webp'),
-  'mountain-climbers-start': require('../assets/images/samples/mountain-climbers-start.webp'),
+  'bench-leg-pull-in': require('../assets/images/samples/bench-leg-pull-in.webp'),
+  'bent-arm-barbell-pullover': require('../assets/images/samples/bent-arm-barbell-pullover.webp'),
+  'cossack-squat': require('../assets/images/samples/cossack-squat.webp'),
+  'incline-db-curl': require('../assets/images/samples/incline-db-curl.webp'),
   'mountain-climbers': require('../assets/images/samples/mountain-climbers.webp'),
-  'squat-peak': require('../assets/images/samples/squat-peak.webp'),
-  'squat-start': require('../assets/images/samples/squat-start.webp'),
 };
 
 // icon basename (e.g. 'anterior-deltoid') -> module ID.
@@ -860,28 +853,14 @@ export function getImage(slug: string, variant: ImageVariant): number | undefine
   return IMAGES[`${slug}-${variant}`];
 }
 
-/** Standard-tier teaser still, or undefined if this slug ships no sample. */
-export function getSample(slug: string, variant: ImageVariant): number | undefined {
-  return SAMPLES[`${slug}-${variant}`];
-}
-
 /** Standard-tier looping animation module ID, or undefined if none ships. */
 export function getSampleAnimation(slug: string): number | undefined {
   return SAMPLES[slug];
 }
 
-// Sample slugs, derived from the SAMPLES still keys (`<slug>-start`) — the one
-// source of truth for "which exercises get the paid-tier teaser".
-export const SAMPLE_SLUGS: string[] = Object.keys(SAMPLES)
-  .map((k) => /^(.+)-start$/.exec(k)?.[1])
-  .filter((s): s is string => Boolean(s))
-  .sort();
-
-const SAMPLE_SLUG_SET = new Set(SAMPLE_SLUGS);
-
-export function isSampleSlug(slug: string): boolean {
-  return SAMPLE_SLUG_SET.has(slug);
-}
+// The sample slugs, straight from the SAMPLES keys — the one source of truth
+// for the paid-tier preview gallery. Sorted for a stable render order.
+export const SAMPLE_SLUGS: string[] = Object.keys(SAMPLES).sort();
 
 // `file` is the taxonomy `image` value, e.g. 'anterior-deltoid.webp'.
 export function getMuscleIcon(file: string | undefined): number | undefined {
