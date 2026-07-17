@@ -1,5 +1,12 @@
 import { Image, Pressable, StyleSheet, Text, View } from 'react-native';
-import { type Exercise, type Locale, exerciseName, prettyEnum } from '../lib/bundle';
+import {
+  type Exercise,
+  type Locale,
+  exerciseName,
+  imageBase,
+  prettyEnum,
+  thumbVariant,
+} from '../lib/bundle';
 import { getImage } from '../lib/images';
 import { useTheme } from '../lib/theme';
 import { Pill } from './Pill';
@@ -14,7 +21,8 @@ export function ExerciseListItem({
   onPress: () => void;
 }) {
   const t = useTheme();
-  const peak = getImage(exercise.id, 'peak');
+  const variant = thumbVariant(exercise);
+  const thumb = variant ? getImage(imageBase(exercise), variant) : undefined;
   return (
     <Pressable
       onPress={onPress}
@@ -29,8 +37,8 @@ export function ExerciseListItem({
       accessibilityLabel={`Open ${exerciseName(exercise, locale)}`}
     >
       <View style={[styles.thumb, { backgroundColor: t.imageBg }]}>
-        {peak ? (
-          <Image source={peak} resizeMode="contain" style={styles.thumbImage} />
+        {thumb ? (
+          <Image source={thumb} resizeMode="contain" style={styles.thumbImage} />
         ) : null}
       </View>
       <View style={styles.body}>

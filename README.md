@@ -1,16 +1,19 @@
 # RepDB Example — React Native (Expo)
 
-A small Expo Router starter that browses 21 fitness exercises from the
-[RepDB](https://repdb.co) preview dataset.
+A small Expo Router starter that browses **400 fitness exercises** from the
+[RepDB free-tier dataset](https://repdb.co/free-exercise-dataset).
 
 ## Features
 
 - Single-screen list of exercises (FlatList) with thumbnail + tags
-- Detail screen with a **real looping animated WebP** (via `expo-image`), with a
-  start↔peak cross-fade as the fallback for any exercise without an animation
-- **Flat ↔ classic** visual-style toggle (white background vs transparent), MET,
-  and muscle / equipment icons with localized labels
-- EN / DE / ES locale switch (translates exercise data — UI strings are EN)
+- Detail screen with flat **start ↔ peak** frames that cross-fade (or a single
+  static pose for the ~50 single-frame exercises), instructions, MET, and
+  muscle / equipment icons with localized labels
+- Standard-tier teaser: five sample exercises (deadlift, squat, bench-press,
+  kettlebell-swing, mountain-climbers) show a **Flat / Standard** style toggle
+  and, for mountain-climbers, a looping animated WebP (via `expo-image`) — the
+  paid-tier look, marked with a "Standard tier preview" badge
+- EN / DE / ES locale switch (translates the exercise data — UI strings are EN)
 - Light + dark themes that follow the OS setting
 - Builds on iOS, Android, and Web from the same source
 
@@ -27,39 +30,56 @@ Or scan the QR code with **Expo Go** on your phone.
 ## What's vendored where
 
 ```
-assets/exercises.json        # the preview bundle, imported as a module
-assets/images/flat/*.webp    # 42 webp images (21 exercises × start/peak)
-lib/images.ts                # auto-generated require() map (commit it!)
-LICENSE-preview.md           # CC-BY-NC for the bundle data
-LICENSE                      # MIT for the example code
+assets/exercises.json          # the free-tier bundle (400 exercises), imported as a module
+assets/images/flat/*.webp      # 745 flat webp (start/peak pairs + single-pose "main")
+assets/images/muscles/*.webp   # 27 muscle icons
+assets/images/equipment/*.webp # 46 equipment icons
+assets/images/samples/*.webp   # paid-tier teaser stills + 1 animation (evaluation-only)
+lib/images.ts                  # auto-generated require() map (commit it!)
+LICENSE-free.md                # RepDB Free Tier License for the bundle data & images
+LICENSE                        # MIT for the example code
 ```
 
 ### Why the require() map?
 
-React Native's Metro bundler resolves `require()` of static assets at
-build time. Dynamic paths like `require('./assets/' + name)` won't work.
-We generate `lib/images.ts` once with one explicit `require()` per file,
-so `getImage(slug, variant)` returns a usable module ID at runtime.
+React Native's Metro bundler resolves `require()` of static assets at build
+time. Dynamic paths like `require('./assets/' + name)` won't work. We generate
+`lib/images.ts` once with one explicit `require()` per file (745 flat + samples
++ icons), so `getImage(slug, variant)` returns a usable module ID at runtime.
 
-Re-run `npm run gen-images` after syncing the bundle to refresh the map.
+The five sample slugs are **derived** from the `*-start.webp` files in
+`assets/images/samples/` (see `SAMPLE_SLUGS` in `lib/images.ts`) — no hardcoded
+list. Re-run `npm run gen-images` after syncing the bundle to refresh the map.
 
-## Data
+## Data & license
 
-This demo uses the RepDB **preview** bundle: 21 hand-picked exercises under
-[CC-BY-NC 4.0](LICENSE-preview.md). For commercial use or the full dataset
-(400+ exercises with two visual styles, transparent backgrounds, animations,
-multilingual translations, alternative & progression relations), see
+This demo uses the RepDB **free tier**: a dated snapshot of 400 exercises with
+flat-style images, under the [RepDB Free Tier License](LICENSE-free.md).
+
+**Attribution required.** Keep a visible link — "Exercise data by RepDB
+(repdb.co)" — in your app's about/credits screen, README, or footer.
+
+**No generative-AI derivation.** The images may not be used as input, reference,
+or conditioning material for generative models (image-to-image, style transfer,
+fine-tuning, or similar). See term 5 of [LICENSE-free.md](LICENSE-free.md).
+
+**No redistribution as a dataset** — in-app use only. The `assets/images/samples/`
+folder is evaluation-only and is not covered by the free-use grant.
+
+For the full, growing dataset with two visual styles, transparent backgrounds,
+animations, 1024px images, and multilingual data, see
 <https://repdb.co/pricing>.
 
 > Exercise data & images: RepDB (https://repdb.co)
 
 ## Sister demos
 
-- [**exercise-dataset**](https://github.com/sergei-argutin/exercise-dataset) — the raw dataset (JSON + classic/flat WebP), browsable [live viewer](https://sergei-argutin.github.io/exercise-dataset/)
+- [**exercise-dataset**](https://github.com/sergei-argutin/exercise-dataset) — the raw dataset (JSON + WebP), browsable [live viewer](https://sergei-argutin.github.io/exercise-dataset/)
 - [repdb-example-nextjs](https://github.com/sergei-argutin/repdb-example-nextjs)
 - [repdb-example-flutter](https://github.com/sergei-argutin/repdb-example-flutter)
 
 ## License
 
-MIT for the example code (`LICENSE`). Bundle data under CC-BY-NC 4.0
-(`LICENSE-preview.md`). PRs welcome — accessibility improvements especially.
+MIT for the example code (`LICENSE`). Bundle data & images under the
+[RepDB Free Tier License](LICENSE-free.md). PRs welcome — accessibility
+improvements especially.

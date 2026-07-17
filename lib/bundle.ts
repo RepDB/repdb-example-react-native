@@ -1,4 +1,5 @@
 import bundleJson from '../assets/exercises.json';
+import type { ImageVariant } from './images';
 
 export type Locale = 'en' | 'de' | 'es';
 
@@ -16,8 +17,10 @@ export interface Exercise {
   instructions_en?: string[];
   instructions_de?: string[];
   instructions_es?: string[];
-  images?: { flat?: ('start' | 'peak')[]; classic?: ('start' | 'peak')[] };
-  animation?: boolean;
+  /** Flat-style frames shipped for this exercise: ["start","peak"] or ["main"]. */
+  images?: { flat?: ImageVariant[] };
+  /** When set, image files live under this other exercise's slug (shared render). */
+  image_alias?: string;
   met?: number;
 }
 
@@ -44,9 +47,22 @@ export const LOCALES: Locale[] = BUNDLE.locales;
 export const MUSCLES: Record<string, TaxonomyEntry> = BUNDLE.muscles ?? {};
 export const EQUIPMENT: Record<string, TaxonomyEntry> = BUNDLE.equipment ?? {};
 
-/** True when the exercise ships both flat and classic stills (toggle-able). */
-export function hasBothStyles(ex: Exercise): boolean {
-  return Boolean(ex.images?.flat?.length && ex.images?.classic?.length);
+/** Base slug for image files — aliased exercises borrow another slug's renders. */
+export function imageBase(ex: Exercise): string {
+  return ex.image_alias ?? ex.id;
+}
+
+/** Flat frames this exercise ships (["start","peak"] or ["main"]). */
+export function flatVariants(ex: Exercise): ImageVariant[] {
+  return ex.images?.flat ?? [];
+}
+
+/** Best single thumbnail variant for cards: peak, else main, else the first. */
+export function thumbVariant(ex: Exercise): ImageVariant | undefined {
+  const variants = flatVariants(ex);
+  return (
+    variants.find((v) => v === 'peak') ?? variants.find((v) => v === 'main') ?? variants[0]
+  );
 }
 
 function localized(entry: TaxonomyEntry | undefined, locale: Locale, fallback: string): string {

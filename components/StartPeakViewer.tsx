@@ -1,33 +1,42 @@
 import { useEffect, useRef, useState } from 'react';
-import { Animated, Pressable, StyleSheet, Text, View } from 'react-native';
-import { getImage, type ImageStyle } from '../lib/images';
+import { Animated, Image, Pressable, StyleSheet, Text, View } from 'react-native';
+import { getImage, getSample, type ImageVariant } from '../lib/images';
 import { useTheme } from '../lib/theme';
 
 interface Props {
+  /** Image-base slug (already alias-resolved by the caller). */
   slug: string;
   alt: string;
-  /** Which still style to show: 'flat' (white bg) or 'classic' (transparent). */
-  style?: ImageStyle;
-  /** Toggle interval in ms. Set to 0 to pause auto-toggle. */
+  /** Flat frames the exercise ships: ["start","peak"] or ["main"]. */
+  variants: ImageVariant[];
+  /** Pull frames from the Standard-tier sample set instead of the free flat set. */
+  sample?: boolean;
+  /** Cross-fade interval in ms. Set to 0 to pause auto-toggle. */
   interval?: number;
 }
 
 /**
- * Cross-fades between the start and peak frames every `interval` ms, in the
- * requested visual style. Tap to pause/resume. The looping animation is a
- * separate component (AnimationViewer).
+ * Renders an exercise's frames. A start/peak pair cross-fades every `interval`
+ * ms (tap to pause/resume); a single `main` pose renders statically. When
+ * `sample` is set it draws from the Standard-tier teaser stills. The looping
+ * animation is a separate component (AnimationViewer).
  */
-export function StartPeakViewer({ slug, alt, style = 'flat', interval = 1600 }: Props) {
+export function StartPeakViewer({ slug, alt, variants, sample = false, interval = 1600 }: Props) {
   const t = useTheme();
-  const start = getImage(slug, 'start', style);
-  const peak = getImage(slug, 'peak', style);
+  const resolve = (variant: ImageVariant) =>
+    sample ? getSample(slug, variant) : getImage(slug, variant);
+
+  const isPair = variants.includes('start') && variants.includes('peak');
+  const start = resolve('start');
+  const peak = resolve('peak');
+  const single = resolve(variants.find((v) => v === 'main') ?? variants[0] ?? 'main');
 
   const fade = useRef(new Animated.Value(0)).current; // 0 = start, 1 = peak
   const [showingPeak, setShowingPeak] = useState(false);
   const [paused, setPaused] = useState(false);
 
   useEffect(() => {
-    if (paused || interval <= 0 || !start || !peak) return;
+    if (!isPair || paused || interval <= 0 || !start || !peak) return;
     const tick = () => {
       Animated.timing(fade, {
         toValue: showingPeak ? 0 : 1,
@@ -39,7 +48,27 @@ export function StartPeakViewer({ slug, alt, style = 'flat', interval = 1600 }: 
     };
     const id = setInterval(tick, interval);
     return () => clearInterval(id);
-  }, [showingPeak, paused, fade, interval, start, peak]);
+  }, [isPair, showingPeak, paused, fade, interval, start, peak]);
+
+  // Single-pose exercise (images: { flat: ["main"] }) — static frame, no fade.
+  if (!isPair) {
+    return (
+      <View
+        style={[styles.frame, { backgroundColor: t.imageBg, borderColor: t.border }]}
+        accessibilityRole="image"
+        accessibilityLabel={alt}
+      >
+        {single ? (
+          <Image source={single} resizeMode="contain" style={styles.image} />
+        ) : (
+          <Text style={{ color: t.muted, fontSize: 12 }}>no image</Text>
+        )}
+        <View style={[styles.badge, { backgroundColor: t.surface, borderColor: t.border }]}>
+          <Text style={[styles.badgeText, { color: t.muted }]}>POSE</Text>
+        </View>
+      </View>
+    );
+  }
 
   if (!start && !peak) {
     return (
@@ -77,7 +106,7 @@ export function StartPeakViewer({ slug, alt, style = 'flat', interval = 1600 }: 
         />
       )}
       <View style={[styles.badge, { backgroundColor: t.surface, borderColor: t.border }]}>
-        <Text style={{ color: t.muted, fontSize: 10.5, fontWeight: '700', letterSpacing: 1 }}>
+        <Text style={[styles.badgeText, { color: t.muted }]}>
           {paused ? 'PAUSED' : showingPeak ? 'PEAK' : 'START'}
         </Text>
       </View>
@@ -109,4 +138,5 @@ const styles = StyleSheet.create({
     borderRadius: 6,
     borderWidth: StyleSheet.hairlineWidth,
   },
+  badgeText: { fontSize: 10.5, fontWeight: '700', letterSpacing: 1 },
 });

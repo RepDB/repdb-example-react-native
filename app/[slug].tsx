@@ -10,13 +10,14 @@ import {
   exerciseInstructions,
   exerciseName,
   findExercise,
-  hasBothStyles,
+  flatVariants,
+  imageBase,
   type Locale,
   muscleImageFile,
   muscleLabel,
   prettyEnum,
 } from '../lib/bundle';
-import { getEquipmentIcon, getMuscleIcon, type ImageStyle } from '../lib/images';
+import { getEquipmentIcon, getMuscleIcon, getSampleAnimation, isSampleSlug } from '../lib/images';
 import { useTheme } from '../lib/theme';
 
 export default function DetailScreen() {
@@ -27,7 +28,7 @@ export default function DetailScreen() {
   }>();
   const locale: Locale =
     localeRaw === 'de' || localeRaw === 'es' ? localeRaw : 'en';
-  const [style, setStyle] = useState<ImageStyle>('flat');
+  const [showSample, setShowSample] = useState(false);
   const exercise = findExercise(slug);
 
   if (!exercise) {
@@ -41,7 +42,10 @@ export default function DetailScreen() {
 
   const name = exerciseName(exercise, locale);
   const instructions = exerciseInstructions(exercise, locale);
-  const canToggle = hasBothStyles(exercise);
+  const base = imageBase(exercise);
+  const variants = flatVariants(exercise);
+  const isSample = isSampleSlug(exercise.id); // sample slugs are never aliased
+  const hasSampleAnimation = isSample && getSampleAnimation(exercise.id) !== undefined;
   const equipIcon = exercise.equipment
     ? getEquipmentIcon(equipmentImageFile(exercise.equipment))
     : undefined;
@@ -63,13 +67,21 @@ export default function DetailScreen() {
         {typeof exercise.met === 'number' ? <Pill label={`MET · ${exercise.met}`} /> : null}
       </View>
 
-      <AnimationViewer slug={exercise.id} alt={`${name} — animation`} />
+      {isSample ? <AnimationViewer slug={exercise.id} alt={`${name} — animation`} /> : null}
 
-      {canToggle ? <StyleToggle value={style} onChange={setStyle} /> : null}
-      <StartPeakViewer slug={exercise.id} alt={name} style={style} />
-      <Text style={[styles.viewerHint, { color: t.muted }]}>
-        Tap the frames to pause / resume the cross-fade.
-      </Text>
+      {isSample ? (
+        <StyleToggle
+          value={showSample}
+          onChange={setShowSample}
+          showBadge={showSample && !hasSampleAnimation}
+        />
+      ) : null}
+      <StartPeakViewer slug={base} alt={name} variants={variants} sample={isSample && showSample} />
+      {variants.length > 1 ? (
+        <Text style={[styles.viewerHint, { color: t.muted }]}>
+          Tap the frames to pause / resume the cross-fade.
+        </Text>
+      ) : null}
 
       {instructions.length > 0 && (
         <View style={[styles.card, { backgroundColor: t.surface, borderColor: t.border }]}>
@@ -98,24 +110,36 @@ export default function DetailScreen() {
   );
 }
 
+/**
+ * Flat ↔ Standard still toggle, shown only for the sample slugs. "Flat" is the
+ * free-tier white-background frame; "Standard" is the paid-tier transparent
+ * matte-clay teaser. The "Standard tier preview" badge appears only while the
+ * Standard style is selected, and is suppressed when the AnimationViewer above
+ * already shows its own badge (`showBadge` is decided by the caller).
+ */
 function StyleToggle({
   value,
   onChange,
+  showBadge,
 }: {
-  value: ImageStyle;
-  onChange: (s: ImageStyle) => void;
+  value: boolean;
+  onChange: (showSample: boolean) => void;
+  showBadge: boolean;
 }) {
   const t = useTheme();
-  const options: ImageStyle[] = ['flat', 'classic'];
+  const options: [boolean, string][] = [
+    [false, 'Flat'],
+    [true, 'Standard'],
+  ];
   return (
     <View style={styles.toggleRow}>
       <Text style={[styles.cardTitle, { color: t.muted }]}>STYLE</Text>
       <View style={[styles.toggle, { borderColor: t.border, backgroundColor: t.surface }]}>
-        {options.map((opt) => {
+        {options.map(([opt, label]) => {
           const on = opt === value;
           return (
             <Pressable
-              key={opt}
+              key={label}
               onPress={() => onChange(opt)}
               accessibilityRole="button"
               accessibilityState={{ selected: on }}
@@ -126,15 +150,19 @@ function StyleToggle({
                   fontSize: 12,
                   fontWeight: on ? '700' : '500',
                   color: on ? '#fff' : t.muted,
-                  textTransform: 'capitalize',
                 }}
               >
-                {opt}
+                {label}
               </Text>
             </Pressable>
           );
         })}
       </View>
+      {showBadge ? (
+        <View style={[styles.teaser, { borderColor: t.accent }]}>
+          <Text style={[styles.teaserText, { color: t.accent }]}>STANDARD TIER PREVIEW</Text>
+        </View>
+      ) : null}
     </View>
   );
 }
@@ -181,6 +209,13 @@ const styles = StyleSheet.create({
     padding: 2,
   },
   toggleBtn: { paddingHorizontal: 12, paddingVertical: 4, borderRadius: 6 },
+  teaser: {
+    paddingHorizontal: 8,
+    paddingVertical: 3,
+    borderRadius: 6,
+    borderWidth: StyleSheet.hairlineWidth,
+  },
+  teaserText: { fontSize: 9.5, fontWeight: '700', letterSpacing: 0.6 },
   viewerHint: { fontSize: 11, textAlign: 'center', marginTop: -8 },
   card: {
     padding: 14,

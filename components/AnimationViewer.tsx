@@ -1,15 +1,16 @@
 import { Image as ExpoImage } from 'expo-image';
 import { StyleSheet, Text, View } from 'react-native';
-import { getAnimation } from '../lib/images';
+import { getSampleAnimation } from '../lib/images';
 import { useTheme } from '../lib/theme';
 
 /**
- * Plays the exercise's looping animated WebP via expo-image (stock RN <Image>
- * can't animate WebP). Renders nothing when the exercise has no animation.
+ * Plays a Standard-tier sample looping animation (transparent WebP) via
+ * expo-image (stock RN <Image> can't animate WebP). Only a few sample slugs
+ * ship one; renders nothing otherwise. Marked as a paid-tier teaser.
  */
 export function AnimationViewer({ slug, alt }: { slug: string; alt: string }) {
   const t = useTheme();
-  const animation = getAnimation(slug);
+  const animation = getSampleAnimation(slug);
   if (!animation) return null;
 
   return (
@@ -23,6 +24,9 @@ export function AnimationViewer({ slug, alt }: { slug: string; alt: string }) {
         <Text style={{ color: t.muted, fontSize: 10.5, fontWeight: '700', letterSpacing: 1 }}>
           LOOP
         </Text>
+      </View>
+      <View style={[styles.teaser, { backgroundColor: t.accent }]}>
+        <Text style={styles.teaserText}>STANDARD TIER PREVIEW</Text>
       </View>
     </View>
   );
@@ -47,4 +51,13 @@ const styles = StyleSheet.create({
     borderRadius: 6,
     borderWidth: StyleSheet.hairlineWidth,
   },
+  teaser: {
+    position: 'absolute',
+    top: 8,
+    right: 8,
+    paddingHorizontal: 8,
+    paddingVertical: 3,
+    borderRadius: 6,
+  },
+  teaserText: { color: '#fff', fontSize: 10, fontWeight: '700', letterSpacing: 0.8 },
 });
