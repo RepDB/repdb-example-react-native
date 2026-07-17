@@ -25,8 +25,8 @@ export function SampleGallery({ locale }: { locale: Locale }) {
       </View>
 
       <Text style={[styles.note, { color: t.muted }]}>
-        Every paid-tier exercise ships a looping animation like these — the clips
-        shown on repdb.co.{' '}
+        The Standard tier adds looping animations like these for most exercises — the
+        clips shown on repdb.co.{' '}
         <Text
           style={{ color: t.accent, fontWeight: '600' }}
           onPress={() => Linking.openURL('https://repdb.co/pricing')}
