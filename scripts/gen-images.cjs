@@ -46,8 +46,8 @@ ${block('assets/images/flat')}
 };
 
 // slug -> module ID, Standard-tier looping animations (transparent WebP) — the
-// exact clips shown on repdb.co. Evaluation only. One animation per slug; the
-// paid-tier preview gallery is DERIVED from these keys (see SAMPLE_SLUGS).
+// exact clips shown on repdb.co. One animation per slug; the paid-tier preview
+// gallery is DERIVED from these keys (see SAMPLE_SLUGS).
 export const SAMPLES: Record<string, number> = {
 ${block('assets/images/samples')}
 };

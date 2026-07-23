@@ -9,9 +9,9 @@ A small Expo Router starter that browses **400 fitness exercises** from the
 - Detail screen with flat **start ↔ peak** frames that cross-fade (or a single
   static pose for the ~50 single-frame exercises), instructions, MET, and
   muscle / equipment icons with localized labels
-- Paid-tier preview gallery on the home screen: **5 looping animations** (via
-  `expo-image`) — the exact clips shown on [repdb.co](https://repdb.co), marked
-  "Standard tier preview — evaluation only"
+- Paid-tier preview gallery on the home screen: a **looping animation** (via
+  `expo-image`) — the exact clip shown on [repdb.co](https://repdb.co), marked
+  "Standard tier preview"
 - EN / DE / ES locale switch (translates the exercise data — UI strings are EN)
 - Light + dark themes that follow the OS setting
 - Builds on iOS, Android, and Web from the same source
@@ -33,7 +33,7 @@ assets/exercises.json          # the free-tier bundle (400 exercises), imported 
 assets/images/flat/*.webp      # 745 flat webp (start/peak pairs + single-pose "main")
 assets/images/muscles/*.webp   # 27 muscle icons
 assets/images/equipment/*.webp # 46 equipment icons
-assets/images/samples/*.webp   # 5 paid-tier looping animations (evaluation-only)
+assets/images/samples/*.webp   # 1 paid-tier looping animation (Standard-tier preview)
 lib/images.ts                  # auto-generated require() map (commit it!)
 LICENSE-free.md                # RepDB Free Tier License for the bundle data & images
 LICENSE                        # MIT for the example code
@@ -62,8 +62,7 @@ flat-style images, under the [RepDB Free Tier License](LICENSE-free.md).
 or conditioning material for generative models (image-to-image, style transfer,
 fine-tuning, or similar). See term 5 of [LICENSE-free.md](LICENSE-free.md).
 
-**No redistribution as a dataset** — in-app use only. The `assets/images/samples/`
-folder is evaluation-only and is not covered by the free-use grant.
+**No redistribution as a dataset** — in-app use only.
 
 For the full, growing dataset with two visual styles, transparent backgrounds,
 animations, 1024px images, and multilingual data, see

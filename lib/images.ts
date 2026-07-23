@@ -758,14 +758,10 @@ export const IMAGES: Record<string, number> = {
 };
 
 // slug -> module ID, Standard-tier looping animations (transparent WebP) — the
-// exact clips shown on repdb.co. Evaluation only. One animation per slug; the
-// paid-tier preview gallery is DERIVED from these keys (see SAMPLE_SLUGS).
+// exact clips shown on repdb.co. One animation per slug; the paid-tier preview
+// gallery is DERIVED from these keys (see SAMPLE_SLUGS).
 export const SAMPLES: Record<string, number> = {
-  'bench-leg-pull-in': require('../assets/images/samples/bench-leg-pull-in.webp'),
-  'bent-arm-barbell-pullover': require('../assets/images/samples/bent-arm-barbell-pullover.webp'),
-  'cossack-squat': require('../assets/images/samples/cossack-squat.webp'),
-  'incline-db-curl': require('../assets/images/samples/incline-db-curl.webp'),
-  'mountain-climbers': require('../assets/images/samples/mountain-climbers.webp'),
+  'bent-over-db-row': require('../assets/images/samples/bent-over-db-row.webp'),
 };
 
 // icon basename (e.g. 'anterior-deltoid') -> module ID.

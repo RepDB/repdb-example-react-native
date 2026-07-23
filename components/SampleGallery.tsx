@@ -5,9 +5,9 @@ import { SAMPLE_SLUGS, getSampleAnimation } from '../lib/images';
 import { useTheme } from '../lib/theme';
 
 /**
- * Paid-tier preview gallery: the five Standard-tier looping animations (the
- * exact clips shown on repdb.co), evaluation-only. The slug set is DERIVED from
- * SAMPLE_SLUGS (the SAMPLES map) — never hardcoded here.
+ * Paid-tier preview gallery: Standard-tier looping animation(s) (the exact
+ * clips shown on repdb.co). The slug set is DERIVED from SAMPLE_SLUGS (the
+ * SAMPLES map) — never hardcoded here.
  */
 export function SampleGallery({ locale }: { locale: Locale }) {
   const t = useTheme();
@@ -19,7 +19,7 @@ export function SampleGallery({ locale }: { locale: Locale }) {
         <Text style={[styles.title, { color: t.text }]}>Paid tier preview</Text>
         <View style={[styles.badge, { backgroundColor: t.accentSoft, borderColor: t.accent }]}>
           <Text style={[styles.badgeText, { color: t.accent }]}>
-            STANDARD TIER PREVIEW — EVALUATION ONLY
+            STANDARD TIER PREVIEW
           </Text>
         </View>
       </View>
