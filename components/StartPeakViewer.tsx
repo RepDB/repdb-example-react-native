@@ -110,6 +110,9 @@ export function StartPeakViewer({ slug, alt, variants, interval = 1600 }: Props)
 
 const styles = StyleSheet.create({
   frame: {
+    width: '100%',
+    maxWidth: 560,
+    alignSelf: 'center',
     aspectRatio: 4 / 3,
     borderRadius: 12,
     borderWidth: StyleSheet.hairlineWidth,

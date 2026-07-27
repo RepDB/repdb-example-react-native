@@ -20,13 +20,15 @@ const webps = (dir) =>
 // Build a `'key': require('<dir>/<file>'),` block. `key` is the filename
 // without the .webp extension (slug-variant for flat stills, bare slug for the
 // sample animations, icon basename for muscles/equipment).
-const block = (dir) =>
-  webps(dir)
+const block = (dir, files = webps(dir)) =>
+  files
     .map((f) => `  '${f.replace(/\.webp$/, '')}': require('../${dir}/${f}'),`)
     .join('\n');
 
 const flat = webps('assets/images/flat');
-const samples = webps('assets/images/samples');
+const samples = webps('assets/images/samples').filter(
+  (file) => !/-(start|peak|main)\.webp$/.test(file),
+);
 const muscles = webps('assets/images/muscles');
 const equipment = webps('assets/images/equipment');
 
@@ -49,7 +51,7 @@ ${block('assets/images/flat')}
 // exact clips shown on repdb.co. One animation per slug; the paid-tier preview
 // gallery is DERIVED from these keys (see SAMPLE_SLUGS).
 export const SAMPLES: Record<string, number> = {
-${block('assets/images/samples')}
+${block('assets/images/samples', samples)}
 };
 
 // icon basename (e.g. 'anterior-deltoid') -> module ID.

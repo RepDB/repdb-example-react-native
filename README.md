@@ -30,7 +30,7 @@ Or scan the QR code with **Expo Go** on your phone.
 
 ```
 assets/exercises.json          # the free-tier bundle (400 exercises), imported as a module
-assets/images/flat/*.webp      # 745 flat webp (start/peak pairs + single-pose "main")
+assets/images/flat/*.webp      # 741 flat webp (start/peak pairs + single-pose "main")
 assets/images/muscles/*.webp   # 27 muscle icons
 assets/images/equipment/*.webp # 46 equipment icons
 assets/images/samples/*.webp   # 1 paid-tier looping animation (Standard-tier preview)
@@ -43,7 +43,7 @@ LICENSE                        # MIT for the example code
 
 React Native's Metro bundler resolves `require()` of static assets at build
 time. Dynamic paths like `require('./assets/' + name)` won't work. We generate
-`lib/images.ts` once with one explicit `require()` per file (745 flat + samples
+`lib/images.ts` once with one explicit `require()` per file (741 flat + samples
 + icons), so `getImage(slug, variant)` returns a usable module ID at runtime.
 
 The paid-tier preview gallery is **derived** from the animation files in
