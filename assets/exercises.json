@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "generated_at": "2026-07-16T19:41:37Z",
+  "generated_at": "2026-07-27T13:53:50Z",
   "locales": [
     "de",
     "en",
@@ -12294,7 +12294,7 @@
         "dumbbell pistol squat"
       ],
       "instructions_en": [
-        "Stand tall, holding a dumbbell in front of your chest with both hands or in one hand on the same side as the working leg.",
+        "Stand tall, holding a dumbbell in each hand with your arms hanging at your sides.",
         "Lift one leg straight out in front of you, keeping it extended throughout the movement.",
         "Lower your body by bending the knee of your standing leg, keeping your chest up and back straight.",
         "Descend until your glutes are close to your heel or your thigh is parallel to the floor, maintaining balance.",
@@ -12302,8 +12302,8 @@
         "Complete all reps on one side, then switch legs and repeat for the other side per set."
       ],
       "tips_en": [
-        "Start with bodyweight pistol squats to master the movement pattern before adding a dumbbell.",
-        "Use a counterweight (dumbbell) held out in front to help maintain balance during the descent.",
+        "Start with bodyweight pistol squats to master the movement pattern before adding dumbbells.",
+        "Let the dumbbells hang straight down at your sides and keep your chest up to stay balanced over the working foot.",
         "Focus on controlling the eccentric (lowering) phase to improve stability and strength.",
         "Elevate your heel slightly on a small plate if ankle mobility is a limiting factor."
       ],
@@ -12318,7 +12318,7 @@
       "name_de": "Kurzhantel-Pistol-Squat",
       "description_de": "Der Kurzhantel-Pistol-Squat ist eine fortgeschrittene einbeinige Kniebeugen-Variante, die erhebliche Unterkörperkraft, Gleichgewicht und Beweglichkeit aufbaut, hauptsächlich für Quadrizeps und Gesäßmuskulatur.",
       "instructions_de": [
-        "Stehe aufrecht und halte eine Kurzhantel mit beiden Händen vor der Brust oder in einer Hand auf der Seite des Arbeitsbeins.",
+        "Stehe aufrecht und halte in jeder Hand eine Kurzhantel, die Arme hängen seitlich am Körper.",
         "Hebe ein Bein gerade nach vorne an und halte es während der gesamten Bewegung gestreckt.",
         "Senke deinen Körper, indem du das Knie deines Standbeins beugst, Brust oben und Rücken gerade halten.",
         "Gehe so tief, bis dein Gesäß nahe an deiner Ferse ist oder dein Oberschenkel parallel zum Boden ist, und halte das Gleichgewicht.",
@@ -12326,15 +12326,15 @@
         "Absolviere alle Wiederholungen auf einer Seite, wechsle dann das Bein und wiederhole pro Satz für die andere Seite."
       ],
       "tips_de": [
-        "Beginne mit Pistol-Squats ohne Gewicht, um das Bewegungsmuster zu meistern, bevor du eine Kurzhantel hinzufügst.",
-        "Nutze ein Gegengewicht (Kurzhantel), das du nach vorne hältst, um das Gleichgewicht während der Abwärtsbewegung zu halten.",
-        "Konzentriere dich auf die Kontrolle der exzentrischen (senkenden) Phase, um Stabilität und Kraft zu verbessern.",
-        "Erhöhe deine Ferse leicht auf einer kleinen Platte, wenn die Sprunggelenksbeweglichkeit ein limitierender Faktor ist."
+        "Beginne mit Pistol Squats ohne Gewicht, um das Bewegungsmuster zu beherrschen, bevor du Kurzhanteln hinzunimmst.",
+        "Lass die Kurzhanteln seitlich gerade nach unten hängen und halte die Brust aufrecht, um über dem Arbeitsfuß im Gleichgewicht zu bleiben.",
+        "Konzentriere dich auf die kontrollierte exzentrische (absenkende) Phase, um Stabilität und Kraft zu verbessern.",
+        "Erhöhe die Ferse leicht auf einer kleinen Scheibe, falls die Sprunggelenksbeweglichkeit ein limitierender Faktor ist."
       ],
       "name_es": "Sentadilla Pistola con Mancuerna",
       "description_es": "La Sentadilla Pistola con Mancuerna es una variación avanzada de sentadilla a una pierna que desarrolla fuerza significativa en la parte inferior del cuerpo, equilibrio y movilidad, apuntando principalmente a los cuádriceps y glúteos.",
       "instructions_es": [
-        "Ponte de pie, sosteniendo una mancuerna frente a tu pecho con ambas manos o en una mano del mismo lado que la pierna que trabaja.",
+        "Ponte de pie, sosteniendo una mancuerna en cada mano con los brazos colgando a los lados.",
         "Levanta una pierna recta hacia adelante, manteniéndola extendida durante todo el movimiento.",
         "Baja tu cuerpo doblando la rodilla de tu pierna de apoyo, manteniendo el pecho erguido y la espalda recta.",
         "Desciende hasta que tus glúteos estén cerca de tu talón o tu muslo esté paralelo al suelo, manteniendo el equilibrio.",
@@ -12342,10 +12342,10 @@
         "Completa todas las repeticiones de un lado, luego cambia de pierna y repite para el otro lado por serie."
       ],
       "tips_es": [
-        "Comienza con sentadillas pistola sin peso corporal para dominar el patrón de movimiento antes de añadir una mancuerna.",
-        "Usa un contrapeso (mancuerna) sostenido al frente para ayudar a mantener el equilibrio durante el descenso.",
-        "Concéntrate en controlar la fase excéntrica (bajada) para mejorar la estabilidad y la fuerza.",
-        "Eleva ligeramente tu talón sobre un pequeño disco si la movilidad del tobillo es un factor limitante."
+        "Empieza con sentadillas pistola sin peso para dominar el patrón de movimiento antes de añadir mancuernas.",
+        "Deja que las mancuernas cuelguen rectas a los lados y mantén el pecho erguido para conservar el equilibrio sobre el pie que trabaja.",
+        "Concéntrate en controlar la fase excéntrica (de descenso) para mejorar la estabilidad y la fuerza.",
+        "Eleva ligeramente el talón sobre un disco pequeño si la movilidad del tobillo es un factor limitante."
       ],
       "images": {
         "flat": [
@@ -13782,6 +13782,7 @@
         "forearm_flexors",
         "trapezius"
       ],
+      "image_alias": "romanian-deadlift",
       "name_de": "SZ-Stange Romanian Deadlift",
       "description_de": "Ein Romanian Deadlift mit der SZ-Stange. Der angewinkelte Griff schont die Handgelenke und eignet sich für leichtere Hinge-Arbeit oder handgelenkempfindliche Athleten.",
       "instructions_de": [
@@ -28517,6 +28518,7 @@
       "secondary_muscles": [
         "soleus"
       ],
+      "image_alias": "machine-calf-raise",
       "name_de": "Stehende Wadenhebeübung",
       "description_de": "Eine im Stand ausgeführte Wadenübung, die den Gastrocnemius durch einen vollen Bewegungsumfang kräftigt.",
       "instructions_de": [

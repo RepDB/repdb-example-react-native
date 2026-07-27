@@ -45,7 +45,6 @@ export default function ListScreen() {
         )}
         ListFooterComponent={
           <>
-            <SampleGallery locale={locale} />
             <View style={[styles.footer, { borderTopColor: t.border }]}>
               <Text style={[styles.footerText, { color: t.muted }]}>
                 Exercise data by RepDB (repdb.co) — free tier, attribution required.
@@ -60,6 +59,9 @@ export default function ListScreen() {
           </>
         }
       />
+      <View pointerEvents="box-none" style={styles.promoOverlay}>
+        <SampleGallery locale={locale} />
+      </View>
     </SafeAreaView>
   );
 }
@@ -75,7 +77,15 @@ const styles = StyleSheet.create({
   },
   title: { fontSize: 24, fontWeight: '700', letterSpacing: -0.3 },
   subtitle: { fontSize: 13, marginTop: 4 },
-  list: { paddingHorizontal: 16, paddingTop: 8, paddingBottom: 16 },
+  list: { paddingHorizontal: 16, paddingTop: 8, paddingBottom: 180 },
+  promoOverlay: {
+    position: 'absolute',
+    left: 16,
+    right: 16,
+    bottom: 16,
+    zIndex: 10,
+    alignItems: 'flex-end',
+  },
   footer: {
     paddingTop: 16,
     marginTop: 16,

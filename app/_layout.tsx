@@ -20,7 +20,9 @@ export default function RootLayout() {
             headerShadowVisible: false,
             contentStyle: { backgroundColor: t.bg },
           }}
-        />
+        >
+          <Stack.Screen name="index" options={{ headerShown: false }} />
+        </Stack>
       </SafeAreaProvider>
     </GestureHandlerRootView>
   );
