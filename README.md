@@ -72,7 +72,7 @@ animations, 1024px images, and multilingual data, see
 
 ## Sister demos
 
-- [**exercise-dataset**](https://github.com/sergei-argutin/exercise-dataset) — the raw dataset (JSON + WebP), browsable [live viewer](https://sergei-argutin.github.io/exercise-dataset/)
+- [**exercise-dataset**](https://github.com/sergei-argutin/exercise-dataset) — the raw dataset (JSON + WebP), browsable [live viewer](https://exercise-dataset.com/)
 - [repdb-example-nextjs](https://github.com/sergei-argutin/repdb-example-nextjs)
 - [repdb-example-flutter](https://github.com/sergei-argutin/repdb-example-flutter)
 
