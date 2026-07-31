@@ -1,7 +1,7 @@
 # RepDB Example — React Native (Expo)
 
 A small Expo Router starter that browses **400 fitness exercises** from the
-[RepDB free-tier dataset](https://repdb.co/free-exercise-dataset).
+[RepDB free-tier dataset](https://exercise-dataset.com/).
 
 ## Features
 
@@ -10,7 +10,7 @@ A small Expo Router starter that browses **400 fitness exercises** from the
   static pose for the ~50 single-frame exercises), instructions, MET, and
   muscle / equipment icons with localized labels
 - Paid-tier preview gallery on the home screen: a **looping animation** (via
-  `expo-image`) — the exact clip shown on [repdb.co](https://repdb.co), marked
+  `expo-image`) — the exact clip shown on [repdb.co](https://repdb.co/?utm_source=github-react-native), marked
   "Standard tier preview"
 - EN / DE / ES locale switch (translates the exercise data — UI strings are EN)
 - Light + dark themes that follow the OS setting
@@ -66,7 +66,7 @@ fine-tuning, or similar). See term 5 of [LICENSE-free.md](LICENSE-free.md).
 
 For the full, growing dataset with two visual styles, transparent backgrounds,
 animations, 1024px images, and multilingual data, see
-<https://repdb.co/pricing>.
+<https://repdb.co/pricing?utm_source=github-react-native>.
 
 > Exercise data & images: RepDB (https://repdb.co)
 
