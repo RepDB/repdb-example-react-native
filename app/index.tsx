@@ -23,7 +23,7 @@ export default function ListScreen() {
         <View style={{ flex: 1 }}>
           <Text style={[styles.title, { color: t.text }]}>Workout Tracker</Text>
           <Text style={[styles.subtitle, { color: t.muted }]}>
-            400 exercises from the RepDB free-tier dataset. Tap one to inspect.
+            250 exercises from the RepDB free-tier dataset. Tap one to inspect.
           </Text>
         </View>
         <LocaleSwitcher current={locale} onChange={setLocale} />

@@ -1,6 +1,6 @@
 # RepDB Example — React Native (Expo)
 
-A small Expo Router starter that browses **400 fitness exercises** from the
+A small Expo Router starter that browses **250 fitness exercises** from the
 [RepDB free-tier dataset](https://exercise-dataset.com/).
 
 ## Features
@@ -29,8 +29,8 @@ Or scan the QR code with **Expo Go** on your phone.
 ## What's vendored where
 
 ```
-assets/exercises.json          # the free-tier bundle (400 exercises), imported as a module
-assets/images/flat/*.webp      # 741 flat webp (start/peak pairs + single-pose "main")
+assets/exercises.json          # the free-tier bundle (250 exercises), imported as a module
+assets/images/flat/*.webp      # 459 flat webp (start/peak pairs + single-pose "main")
 assets/images/muscles/*.webp   # 27 muscle icons
 assets/images/equipment/*.webp # 46 equipment icons
 assets/images/samples/*.webp   # 1 paid-tier looping animation (Standard-tier preview)
@@ -43,7 +43,7 @@ LICENSE                        # MIT for the example code
 
 React Native's Metro bundler resolves `require()` of static assets at build
 time. Dynamic paths like `require('./assets/' + name)` won't work. We generate
-`lib/images.ts` once with one explicit `require()` per file (741 flat + samples
+`lib/images.ts` once with one explicit `require()` per file (459 flat + samples
 + icons), so `getImage(slug, variant)` returns a usable module ID at runtime.
 
 The paid-tier preview gallery is **derived** from the animation files in
@@ -52,7 +52,7 @@ list. Re-run `npm run gen-images` after syncing the bundle to refresh the map.
 
 ## Data & license
 
-This demo uses the RepDB **free tier**: a dated snapshot of 400 exercises with
+This demo uses the RepDB **free tier**: a dated snapshot of 250 exercises with
 flat-style images, under the [RepDB Free Tier License](LICENSE-free.md).
 
 **Attribution required.** Keep a visible link — "Exercise data by RepDB
