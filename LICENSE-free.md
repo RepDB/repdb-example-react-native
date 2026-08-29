@@ -4,7 +4,7 @@
 
 ## Tier scope
 
-**Free** — a dated snapshot of the RepDB exercise dataset with flat-style images, for personal or commercial use inside applications, with attribution.
+**Free** — every fully illustrated exercise in the RepDB catalog, with flat-style images, for personal or commercial use inside applications, with attribution.
 
 If you need the full, growing dataset, 1024px images, the classic image style, transparent backgrounds, or animated exercises, upgrade at https://repdb.co/pricing.
 

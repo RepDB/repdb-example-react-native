@@ -23,7 +23,7 @@ export default function ListScreen() {
         <View style={{ flex: 1 }}>
           <Text style={[styles.title, { color: t.text }]}>Workout Tracker</Text>
           <Text style={[styles.subtitle, { color: t.muted }]}>
-            250 exercises from the RepDB free-tier dataset. Tap one to inspect.
+            {EXERCISES.length} exercises from the RepDB public flat edition. Tap one to inspect.
           </Text>
         </View>
         <LocaleSwitcher current={locale} onChange={setLocale} />
@@ -53,7 +53,7 @@ export default function ListScreen() {
                 style={[styles.footerText, { color: t.accent, fontWeight: '600' }]}
                 onPress={() => Linking.openURL('https://repdb.co/pricing')}
               >
-                Want the full, growing catalog? See pricing →
+                Want premium assets and a license without attribution? See pricing →
               </Text>
             </View>
           </>
