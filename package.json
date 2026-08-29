@@ -11,8 +11,8 @@
     "gen-images": "node ./scripts/gen-images.cjs"
   },
   "dependencies": {
-    "expo": "~54.0.36",
-    "expo-constants": "~18.0.13",
+    "expo": "~54.0.37",
+    "expo-constants": "~18.0.14",
     "expo-image": "~3.0.11",
     "expo-linking": "~8.0.12",
     "expo-router": "~6.0.23",
