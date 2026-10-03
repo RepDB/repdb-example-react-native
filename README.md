@@ -7,7 +7,7 @@ A small Expo Router starter that browses the current fully illustrated
 
 - Single-screen list of exercises (FlatList) with thumbnail + tags
 - Detail screen with flat **start ↔ peak** frames that cross-fade (or a single
-  static pose for the ~50 single-frame exercises), instructions, MET, and
+  static pose for static holds and stretches), instructions, MET, and
   muscle / equipment icons with localized labels
 - Paid-tier preview gallery on the home screen: a **looping animation** (via
   `expo-image`) — the exact clip shown on [repdb.co](https://repdb.co/?utm_source=github-react-native), marked
@@ -29,10 +29,10 @@ Or scan the QR code with **Expo Go** on your phone.
 ## What's vendored where
 
 ```
-assets/exercises.json          # the public flat-edition bundle, imported as a module
+assets/exercises.json          # the public flat-edition bundle (609 exercises, EN/DE/ES), imported as a module
 assets/images/flat/*.webp      # flat WebP (start/peak pairs + single-pose "main")
 assets/images/muscles/*.webp   # 27 muscle icons
-assets/images/equipment/*.webp # 46 equipment icons
+assets/images/equipment/*.webp # 61 equipment icons
 assets/images/samples/*.webp   # 1 paid-tier looping animation (Standard-tier preview)
 lib/images.ts                  # auto-generated require() map (commit it!)
 LICENSE-free.md                # RepDB Free Tier License for the bundle data & images
@@ -65,8 +65,8 @@ fine-tuning, or similar). See term 5 of [LICENSE-free.md](LICENSE-free.md).
 
 **No redistribution as a dataset** — in-app use only.
 
-For classic images, transparent backgrounds, animations, 1024px assets, and a
-commercial license without attribution, see
+For French content, classic images, transparent backgrounds, animations, a female
+character add-on, 1024px assets, and a commercial license without attribution, see
 <https://repdb.co/pricing?utm_source=github-react-native>.
 
 > Exercise data & images: RepDB (https://repdb.co)
