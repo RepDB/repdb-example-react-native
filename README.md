@@ -29,7 +29,7 @@ Or scan the QR code with **Expo Go** on your phone.
 ## What's vendored where
 
 ```
-assets/exercises.json          # the public flat-edition bundle (609 exercises, EN/DE/ES), imported as a module
+assets/exercises.json          # the public flat-edition bundle (701 exercises, EN/DE/ES), imported as a module
 assets/images/flat/*.webp      # flat WebP (start/peak pairs + single-pose "main")
 assets/images/muscles/*.webp   # 27 muscle icons
 assets/images/equipment/*.webp # 61 equipment icons
