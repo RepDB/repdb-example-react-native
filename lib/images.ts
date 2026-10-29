@@ -1252,6 +1252,7 @@ export const MUSCLE_ICONS: Record<string, number> = {
   'gluteus-medius': require('../assets/images/muscles/gluteus-medius.webp'),
   'hamstrings': require('../assets/images/muscles/hamstrings.webp'),
   'hip-flexors': require('../assets/images/muscles/hip-flexors.webp'),
+  'infraspinatus-teres-minor': require('../assets/images/muscles/infraspinatus-teres-minor.webp'),
   'lateral-deltoid': require('../assets/images/muscles/lateral-deltoid.webp'),
   'latissimus-dorsi': require('../assets/images/muscles/latissimus-dorsi.webp'),
   'obliques': require('../assets/images/muscles/obliques.webp'),
